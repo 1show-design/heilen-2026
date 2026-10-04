@@ -1,0 +1,719 @@
+[
+ {
+  "file": "chiryo-goju-onyeol.jpg",
+  "alt": "고주파온열암치료실",
+  "pages": [
+   "index",
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 1071,
+  "src": "site/main_06.png"
+ },
+ {
+  "file": "chiryo-goap-sanso.jpg",
+  "alt": "고압산소치료실",
+  "pages": [
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 1071,
+  "src": "site/main_07.png"
+ },
+ {
+  "file": "chiryo-jeonsin-onyeol.jpg",
+  "alt": "전신온열실",
+  "pages": [
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 1071,
+  "src": "site/main_08.png"
+ },
+ {
+  "file": "byeongsil-1insil-a.jpg",
+  "alt": "1인실 병실",
+  "pages": [
+   "ipwon",
+   "amjong-yubangam",
+   "amjong-gapsangseonam",
+   "index"
+  ],
+  "people": false,
+  "w": 1382,
+  "h": 1600,
+  "src": "site/main_04.png"
+ },
+ {
+  "file": "byeongsil-1insil-b.jpg",
+  "alt": "1인실 병실 침대",
+  "pages": [
+   "ipwon"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 938,
+  "src": "site/sub_care1_single_a.png"
+ },
+ {
+  "file": "byeongsil-1insil-c.jpg",
+  "alt": "1인실 병실 창가",
+  "pages": [
+   "ipwon",
+   "oerae"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 938,
+  "src": "site/sub_care1_single_b.png"
+ },
+ {
+  "file": "byeongsil-geosil-a.jpg",
+  "alt": "병실 거실 공간",
+  "pages": [
+   "ipwon"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 938,
+  "src": "site/sub_care1_vvip_a.png"
+ },
+ {
+  "file": "byeongsil-geosil-b.jpg",
+  "alt": "병실 휴게 공간",
+  "pages": [
+   "ipwon",
+   "amjong-gapsangseonam"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 938,
+  "src": "site/sub_care1_vvip_b.png"
+ },
+ {
+  "file": "siksa-chiryosik-a.jpg",
+  "alt": "치료식 식판",
+  "pages": [
+   "ipwon",
+   "hoebok",
+   "amjong-yubangam"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 1071,
+  "src": "site/sub_care1_2023a.png"
+ },
+ {
+  "file": "siksa-chiryosik-b.jpg",
+  "alt": "치료식 식판 반찬",
+  "pages": [
+   "hoebok",
+   "amjong-gapsangseonam"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 1071,
+  "src": "site/sub_care2_2023a.png"
+ },
+ {
+  "file": "oerae-bloom-lounge.jpg",
+  "alt": "9층 외래센터 블룸 라운지",
+  "pages": [
+   "oerae",
+   "chiryo",
+   "index"
+  ],
+  "people": false,
+  "w": 1280,
+  "h": 904,
+  "src": "site/sub_fac_1280.jpg"
+ },
+ {
+  "file": "gonggan-2f-lobby.jpg",
+  "alt": "2층 로비",
+  "pages": [
+   "osineungil",
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 1071,
+  "src": "site/sub_fac_2Flobby.png"
+ },
+ {
+  "file": "chiryo-9f-sogeum-pyeonbaek.jpg",
+  "alt": "9층 소금 편백 찜질방",
+  "pages": [
+   "chiryo",
+   "oerae"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 1071,
+  "src": "site/sub_fac_9Fsalt.png"
+ },
+ {
+  "file": "chiryo-limpeu-dosu.jpg",
+  "alt": "림프·도수치료 침대와 장비",
+  "pages": [
+   "chiryo",
+   "hoebok",
+   "amjong-yubangam"
+  ],
+  "people": false,
+  "w": 560,
+  "h": 330,
+  "src": "site/sub_fac_limp.png"
+ },
+ {
+  "file": "gonggan-1f-gallery-myeonhoe.jpg",
+  "alt": "1층 갤러리(면회 장소)",
+  "pages": [
+   "osineungil",
+   "ipwon"
+  ],
+  "people": false,
+  "w": 1600,
+  "h": 1131,
+  "src": "site/sub_fac_room45.jpg"
+ },
+ {
+  "file": "geonmul-oegwan-c.png",
+  "alt": "하일렌요양병원 건물 외관(봄)",
+  "pages": [
+   "osineungil"
+  ],
+  "people": false,
+  "w": 1500,
+  "h": 1064,
+  "src": "site/sub_fac_floor.png"
+ },
+ {
+  "file": "uiryojin-kim-seonghun.jpg",
+  "alt": "김성훈 수석병원장",
+  "pages": [
+   "uiryojin",
+   "index"
+  ],
+  "people": true,
+  "w": 1413,
+  "h": 1600,
+  "src": "site/main_09.png"
+ },
+ {
+  "file": "uiryojin-jang-ikwan.jpg",
+  "alt": "장익완 병원장",
+  "pages": [
+   "uiryojin"
+  ],
+  "people": true,
+  "w": 1413,
+  "h": 1600,
+  "src": "site/main_11.png"
+ },
+ {
+  "file": "uiryojin-lee-jeonggyeong.jpg",
+  "alt": "이정경 원장",
+  "pages": [
+   "uiryojin"
+  ],
+  "people": true,
+  "w": 1413,
+  "h": 1600,
+  "src": "site/main_12.png"
+ },
+ {
+  "file": "uiryojin-lee-chungi.jpg",
+  "alt": "이춘기 자문의",
+  "pages": [
+   "uiryojin"
+  ],
+  "people": true,
+  "w": 1413,
+  "h": 1600,
+  "src": "site/main_10.png"
+ },
+ {
+  "file": "injeung-yoyangbyeongwon.png",
+  "alt": "보건복지부 요양병원 인증 의료기관(2025.02.06~2029.02.05)",
+  "pages": [
+   "index",
+   "ipwon"
+  ],
+  "people": false,
+  "w": 1600,
+  "h": 318,
+  "src": "site/main_13.png"
+ },
+ {
+  "file": "uiryojin-lee-chungi-interview.jpg",
+  "alt": "이춘기 자문의 인터뷰",
+  "pages": [
+   "doseogwan",
+   "uiryojin"
+  ],
+  "people": true,
+  "w": 628,
+  "h": 472,
+  "src": "newsletter/assets/opt/p2-img1.jpg"
+ },
+ {
+  "file": "haengsa-talk-concert-a.jpg",
+  "alt": "항암 토크 콘서트 강연 장면",
+  "pages": [
+   "doseogwan",
+   "sosik-2026-gaeul",
+   "sosik"
+  ],
+  "people": true,
+  "w": 900,
+  "h": 555,
+  "src": "newsletter/assets/opt/p1-img3.jpg"
+ },
+ {
+  "file": "haengsa-talk-concert-b.jpg",
+  "alt": "항암 토크 콘서트 강의실",
+  "pages": [
+   "doseogwan",
+   "sosik-2026-gaeul"
+  ],
+  "people": true,
+  "w": 900,
+  "h": 555,
+  "src": "newsletter/assets/opt/p1-img4.jpg"
+ },
+ {
+  "file": "program-maedeup-son.jpg",
+  "alt": "매듭공예 손작업",
+  "pages": [
+   "program",
+   "sosik-2026-gaeul"
+  ],
+  "people": false,
+  "w": 279,
+  "h": 641,
+  "src": "newsletter/assets/opt/p2-img2.jpg"
+ },
+ {
+  "file": "program-maedeup-keyring.jpg",
+  "alt": "매듭공예로 만든 키링",
+  "pages": [
+   "program",
+   "sosik-2026-gaeul"
+  ],
+  "people": false,
+  "w": 145,
+  "h": 330,
+  "src": "newsletter/assets/opt/p2-img7.jpg"
+ },
+ {
+  "file": "program-calligraphy.jpg",
+  "alt": "캘리그라피 시간",
+  "pages": [
+   "program",
+   "sosik-2026-gaeul",
+   "amjong-yubangam"
+  ],
+  "people": false,
+  "w": 85,
+  "h": 190,
+  "src": "newsletter/assets/opt/p2-img8.jpg"
+ },
+ {
+  "file": "program-pyeonbaek-trekking-a.jpg",
+  "alt": "편백숲 트레킹 숲길",
+  "pages": [
+   "program",
+   "hoebok",
+   "index",
+   "sosik-2026-gaeul"
+  ],
+  "people": true,
+  "w": 1000,
+  "h": 756,
+  "src": "newsletter/assets/opt/p2-img3.jpg"
+ },
+ {
+  "file": "program-pyeonbaek-sign.jpg",
+  "alt": "편백숲 트레킹 길 이정표",
+  "pages": [
+   "program",
+   "sosik-2026-gaeul"
+  ],
+  "people": false,
+  "w": 768,
+  "h": 1024,
+  "src": "newsletter/assets/opt/trek-sign.jpg"
+ },
+ {
+  "file": "siksa-teuksik-day.jpg",
+  "alt": "특식데이 식탁",
+  "pages": [
+   "program",
+   "sosik-2026-gaeul",
+   "hoebok"
+  ],
+  "people": false,
+  "w": 492,
+  "h": 376,
+  "src": "newsletter/assets/opt/p2-img9.jpg"
+ },
+ {
+  "file": "gonggan-jeongwon-hangong.jpg",
+  "alt": "병원 정원 전경",
+  "pages": [
+   "index",
+   "chiryo",
+   "osineungil"
+  ],
+  "people": false,
+  "w": 1280,
+  "h": 853,
+  "src": "imweb/01ba1310d49de.jpg"
+ },
+ {
+  "file": "geonmul-oegwan-a.jpg",
+  "alt": "하일렌요양병원 건물 외관",
+  "pages": [
+   "osineungil",
+   "index"
+  ],
+  "people": false,
+  "w": 1600,
+  "h": 1173,
+  "src": "imweb/f849096228144.jpg"
+ },
+ {
+  "file": "geonmul-oegwan-b.jpg",
+  "alt": "하일렌요양병원 건물과 주변",
+  "pages": [
+   "osineungil"
+  ],
+  "people": false,
+  "w": 1600,
+  "h": 1173,
+  "src": "imweb/2c302c2799f34.jpg"
+ },
+ {
+  "file": "gonggan-lounge-a.jpg",
+  "alt": "라운지",
+  "pages": [
+   "oerae",
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1600,
+  "h": 1067,
+  "src": "imweb/0d6a3924a957e.jpg"
+ },
+ {
+  "file": "gonggan-dasil.jpg",
+  "alt": "다실",
+  "pages": [
+   "program"
+  ],
+  "people": false,
+  "w": 1600,
+  "h": 1067,
+  "src": "imweb/4a43889b0e6f9.jpg"
+ },
+ {
+  "file": "gonggan-sangdamsil.jpg",
+  "alt": "상담 공간",
+  "pages": [
+   "ipwon",
+   "faq",
+   "oerae"
+  ],
+  "people": false,
+  "w": 1280,
+  "h": 853,
+  "src": "imweb/4ddf47456aec1.jpg"
+ },
+ {
+  "file": "chiryo-jaehwal-undong.jpg",
+  "alt": "재활 운동 공간",
+  "pages": [
+   "chiryo",
+   "program",
+   "hoebok"
+  ],
+  "people": false,
+  "w": 1280,
+  "h": 853,
+  "src": "imweb/5218a3ef44b4d.jpg"
+ },
+ {
+  "file": "program-earthing-balb.jpg",
+  "alt": "어싱장 맨발 걷기",
+  "pages": [
+   "chiryo",
+   "program"
+  ],
+  "people": true,
+  "w": 1600,
+  "h": 1067,
+  "src": "imweb/a7e2c148cdc4f.jpg"
+ },
+ {
+  "file": "gonggan-myeongsangsil.jpg",
+  "alt": "명상실",
+  "pages": [
+   "program",
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1280,
+  "h": 853,
+  "src": "imweb/af38f3ae0ffae.jpg"
+ },
+ {
+  "file": "gonggan-ondol.jpg",
+  "alt": "온돌 휴식 공간",
+  "pages": [
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1279,
+  "h": 853,
+  "src": "imweb/b639d97c6caab.jpg"
+ },
+ {
+  "file": "gonggan-lounge-b.jpg",
+  "alt": "벽난로 라운지",
+  "pages": [
+   "oerae",
+   "faq"
+  ],
+  "people": false,
+  "w": 1067,
+  "h": 1600,
+  "src": "imweb/ecd91e55b69b0.jpg"
+ },
+ {
+  "file": "gonggan-sky-lounge.jpg",
+  "alt": "10층 스카이라운지",
+  "pages": [
+   "program",
+   "sosik",
+   "doseogwan"
+  ],
+  "people": false,
+  "w": 1600,
+  "h": 1067,
+  "src": "imweb/ffcfddaa787e3.jpg"
+ },
+ {
+  "file": "byeongsil-1insil-d.jpg",
+  "alt": "1인실 병실(2023)",
+  "pages": [
+   "ipwon"
+  ],
+  "people": false,
+  "w": 735,
+  "h": 299,
+  "src": "pdf/202311_02호_p2_09.jpg"
+ },
+ {
+  "file": "program-yoga-a.jpg",
+  "alt": "요가 프로그램",
+  "pages": [
+   "program"
+  ],
+  "people": true,
+  "w": 735,
+  "h": 299,
+  "src": "pdf/202311_02호_p2_14.jpg"
+ },
+ {
+  "file": "gonggan-myeongsangsil-b.jpg",
+  "alt": "명상·휴식 공간",
+  "pages": [
+   "program"
+  ],
+  "people": false,
+  "w": 735,
+  "h": 299,
+  "src": "pdf/202311_02호_p2_15.jpg"
+ },
+ {
+  "file": "program-pyeonbaek-trekking-b.jpg",
+  "alt": "편백숲 트레킹",
+  "pages": [
+   "program",
+   "hoebok"
+  ],
+  "people": true,
+  "w": 1600,
+  "h": 1079,
+  "src": "pdf/202506_2025여름호_p1_02.jpg"
+ },
+ {
+  "file": "chiryo-goju-onyeol-b.jpg",
+  "alt": "고주파온열암치료실(2025)",
+  "pages": [
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1028,
+  "h": 648,
+  "src": "pdf/202511_2025겨울호_p2_06.jpg"
+ },
+ {
+  "file": "program-gardening.jpg",
+  "alt": "가드닝 클래스",
+  "pages": [
+   "program",
+   "doseogwan"
+  ],
+  "people": true,
+  "w": 1028,
+  "h": 648,
+  "src": "pdf/202511_2025겨울호_p2_09.jpg"
+ },
+ {
+  "file": "geonmul-oegwan-bom.jpg",
+  "alt": "봄의 하일렌요양병원 건물",
+  "pages": [
+   "osineungil",
+   "sosik"
+  ],
+  "people": false,
+  "w": 522,
+  "h": 326,
+  "src": "pdf/202604_2026봄호_p1_00.jpg"
+ },
+ {
+  "file": "program-yoga-b.jpg",
+  "alt": "요가 시간",
+  "pages": [
+   "program",
+   "amjong-gapsangseonam"
+  ],
+  "people": true,
+  "w": 1600,
+  "h": 963,
+  "src": "pdf/202607_2026여름호_p1_01.jpg"
+ },
+ {
+  "file": "oerae-bloom-lounge-b.jpg",
+  "alt": "외래센터 블룸 라운지 소파",
+  "pages": [
+   "oerae",
+   "hoebok",
+   "index"
+  ],
+  "people": false,
+  "w": 1032,
+  "h": 716,
+  "src": "pdf/202607_2026여름호_p2_02.jpg"
+ },
+ {
+  "file": "gonggan-2f-jeongwon.jpg",
+  "alt": "2층 회복 정원",
+  "pages": [
+   "chiryo",
+   "program",
+   "index"
+  ],
+  "people": false,
+  "w": 1028,
+  "h": 709,
+  "src": "pdf/202607_2026여름호_p2_03.jpg"
+ },
+ {
+  "file": "program-pyeonbaek-trekking-c.jpg",
+  "alt": "편백숲",
+  "pages": [
+   "program"
+  ],
+  "people": false,
+  "w": 773,
+  "h": 1028,
+  "src": "pdf/202607_2026여름호_p2_05.jpg"
+ },
+ {
+  "file": "byeongsil-1insil-e.jpg",
+  "alt": "1인실 병실(2026)",
+  "pages": [
+   "ipwon",
+   "oerae"
+  ],
+  "people": false,
+  "w": 733,
+  "h": 500,
+  "src": "pdf/202607_2026여름호_p2_06.jpg"
+ },
+ {
+  "file": "haengsa-mini-concert.jpg",
+  "alt": "나를, 봄 미니 콘서트",
+  "pages": [
+   "sosik",
+   "program"
+  ],
+  "people": true,
+  "w": 1037,
+  "h": 714,
+  "src": "pdf/202607_2026여름호_p2_07.jpg"
+ },
+ {
+  "file": "siksa-salad-a.jpg",
+  "alt": "아침 샐러드",
+  "pages": [
+   "hoebok",
+   "ipwon"
+  ],
+  "people": false,
+  "w": 345,
+  "h": 765,
+  "src": "pdf/202607_2026여름호_p2_09.jpg"
+ },
+ {
+  "file": "siksa-salad-b.jpg",
+  "alt": "샐러드 식단",
+  "pages": [
+   "hoebok"
+  ],
+  "people": false,
+  "w": 345,
+  "h": 765,
+  "src": "pdf/202607_2026여름호_p2_10.jpg"
+ },
+ {
+  "file": "siksa-salad-c.jpg",
+  "alt": "샐러드 그릇",
+  "pages": [
+   "program"
+  ],
+  "people": false,
+  "w": 345,
+  "h": 765,
+  "src": "pdf/202607_2026여름호_p2_11.jpg"
+ },
+ {
+  "file": "haengsa-violin-concert.jpg",
+  "alt": "치유 콘서트 연주",
+  "pages": [
+   "sosik",
+   "doseogwan"
+  ],
+  "people": true,
+  "w": 1037,
+  "h": 639,
+  "src": "pdf/202511_2025겨울호_p2_04.jpg"
+ },
+ {
+  "file": "haengsa-talk-concert-c.jpg",
+  "alt": "제3회 항암 토크 콘서트",
+  "pages": [
+   "doseogwan"
+  ],
+  "people": true,
+  "w": 1086,
+  "h": 683,
+  "src": "pdf/202511_2025겨울호_p2_08.jpg"
+ }
+]

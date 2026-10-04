@@ -42,9 +42,12 @@ body {
   max-width: var(--max); margin: 0 auto; padding: 10px var(--gutter);
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
 }
-.brand { display: flex; align-items: baseline; gap: 8px; text-decoration: none; color: var(--ink); }
-.brand strong { font-size: 1.05rem; letter-spacing: -.01em; }
-.brand small { color: var(--ink-soft); font-size: .8rem; }
+.brand { display: flex; flex-direction: column; gap: 0; text-decoration: none; color: var(--ink); min-width: 0; }
+.brand strong { font-size: 1.05rem; letter-spacing: -.01em; white-space: nowrap; line-height: 1.2; }
+.brand small { color: var(--ink-soft); font-size: .78rem; white-space: nowrap; line-height: 1.2; }
+@media (min-width: 560px) { .brand { flex-direction: row; align-items: baseline; gap: 8px; } }
+h1 { font-size: 1.45rem; }
+@media (min-width: 560px) { h1 { font-size: 1.6rem; } }
 .tel { color: var(--green-deep); font-weight: 700; text-decoration: none; font-size: .95rem; white-space: nowrap; }
 
 /* 메뉴: JS 없이 details/summary */
