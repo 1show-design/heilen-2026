@@ -1,0 +1,149 @@
+/* 하일렌요양병원 홈페이지 2026 — 공통 스타일
+   원칙: JS 없이 읽히는 평문 HTML. 모바일 우선. Cafe24 스마트디자인에 그대로 옮길 수 있게 외부 의존은 글꼴 CDN 하나뿐. */
+
+:root {
+  --ink: #1d2a2b;          /* 본문 */
+  --ink-soft: #4f5e5f;     /* 보조 글 */
+  --line: #dfe6e4;         /* 구분선 */
+  --paper: #ffffff;        /* 바탕 */
+  --paper-soft: #f4f7f5;   /* 절 배경 */
+  --green: #1f6b4e;        /* 하일렌 기본색 (버튼·강조) */
+  --green-deep: #154d38;
+  --green-pale: #e7f1ec;
+  --sand: #fbf7ef;         /* 안내 상자 */
+  --amber: #a35a00;        /* [디렉터 확인] 표시 */
+  --amber-pale: #fff3dc;
+  --radius: 14px;
+  --gutter: 16px;
+  --max: 760px;
+  font-size: 17px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* 머리 */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: saturate(1.2) blur(6px);
+}
+.site-header .bar {
+  max-width: var(--max); margin: 0 auto; padding: 10px var(--gutter);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.brand { display: flex; align-items: baseline; gap: 8px; text-decoration: none; color: var(--ink); }
+.brand strong { font-size: 1.05rem; letter-spacing: -.01em; }
+.brand small { color: var(--ink-soft); font-size: .8rem; }
+.tel { color: var(--green-deep); font-weight: 700; text-decoration: none; font-size: .95rem; white-space: nowrap; }
+
+/* 메뉴: JS 없이 details/summary */
+.nav { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter) 8px; }
+.nav summary { cursor: pointer; list-style: none; color: var(--green-deep); font-weight: 600; padding: 4px 0; }
+.nav summary::-webkit-details-marker { display: none; }
+.nav summary::after { content: " ▾"; font-size: .85em; }
+.nav[open] summary::after { content: " ▴"; }
+.nav ul { margin: 6px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+.nav li a { display: block; padding: 6px 0; color: var(--ink); text-decoration: none; border-bottom: 1px dashed var(--line); font-size: .95rem; }
+.nav li a[aria-current="page"] { color: var(--green-deep); font-weight: 700; }
+@media (min-width: 720px) { .nav ul { grid-template-columns: repeat(3, 1fr); } }
+
+/* 본문 틀 */
+main { max-width: var(--max); margin: 0 auto; padding: 8px var(--gutter) 40px; }
+h1 { font-size: 1.6rem; line-height: 1.35; letter-spacing: -.02em; margin: 18px 0 8px; }
+h2 { font-size: 1.25rem; line-height: 1.4; margin: 34px 0 10px; padding-top: 6px; border-top: 2px solid var(--green-pale); }
+h3 { font-size: 1.05rem; margin: 22px 0 6px; }
+p { margin: 0 0 12px; }
+ul, ol { padding-left: 1.2em; margin: 0 0 12px; }
+li { margin: 4px 0; }
+a { color: var(--green-deep); }
+small, .muted { color: var(--ink-soft); }
+
+/* 페이지 요약(답 먼저) */
+.lead {
+  background: var(--paper-soft); border-left: 4px solid var(--green);
+  padding: 12px 14px; border-radius: 0 var(--radius) var(--radius) 0; margin: 10px 0 18px;
+  font-size: 1.02rem;
+}
+.lead strong { color: var(--green-deep); }
+
+/* 사실 요약·근거 블록 */
+.facts { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; margin: 14px 0; background: #fff; }
+.facts dl { margin: 0; display: grid; grid-template-columns: 7.5em 1fr; gap: 6px 10px; }
+.facts dt { color: var(--ink-soft); font-weight: 600; }
+.facts dd { margin: 0; }
+.source {
+  font-size: .9rem; color: var(--ink-soft); border-top: 1px dashed var(--line);
+  margin-top: 26px; padding-top: 10px;
+}
+.source b { color: var(--ink); }
+
+/* 진입 카드(첫 화면) */
+.cards { display: grid; gap: 10px; margin: 14px 0; }
+@media (min-width: 560px) { .cards.three { grid-template-columns: repeat(3, 1fr); } .cards.two { grid-template-columns: 1fr 1fr; } }
+.card {
+  display: block; text-decoration: none; color: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; background: #fff;
+}
+.card:hover { border-color: var(--green); }
+.card h3 { margin: 0 0 4px; font-size: 1.05rem; color: var(--green-deep); }
+.card p { margin: 0; font-size: .95rem; color: var(--ink-soft); }
+
+/* 상담 버튼 */
+.cta { display: grid; gap: 8px; margin: 22px 0; }
+@media (min-width: 560px) { .cta { grid-template-columns: 1fr 1fr; } }
+.btn {
+  display: block; text-align: center; text-decoration: none; font-weight: 700;
+  padding: 13px 16px; border-radius: 999px; border: 2px solid var(--green);
+  color: var(--green-deep); background: #fff;
+}
+.btn.primary { background: var(--green); color: #fff; }
+.cta-note { font-size: .9rem; color: var(--ink-soft); margin-top: -4px; }
+
+/* 표 */
+table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: .95rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+th { background: var(--paper-soft); font-weight: 700; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* 안내 상자 */
+.note { background: var(--sand); border-radius: var(--radius); padding: 12px 14px; margin: 14px 0; }
+.note.limit { background: var(--green-pale); }   /* 한계·주의: 먼저 밝히는 것이 신뢰 화법 */
+
+/* 확인 필요 표시 — 공개 전 반드시 해소 */
+.todo {
+  background: var(--amber-pale); color: var(--amber);
+  border: 1px dashed var(--amber); border-radius: 6px; padding: 0 6px; font-size: .9em; white-space: nowrap;
+}
+
+/* 관련 글·영상 목록 */
+.related { margin: 14px 0; }
+.related li { padding: 6px 0; border-bottom: 1px dashed var(--line); }
+.related li a { text-decoration: none; }
+.related li small { display: block; }
+
+/* FAQ: details 사용 (본문이 HTML에 그대로 남아 검색엔진이 읽음) */
+.faq details { border-bottom: 1px solid var(--line); padding: 8px 0; }
+.faq summary { cursor: pointer; font-weight: 700; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::before { content: "Q. "; color: var(--green); }
+.faq details p { margin: 8px 0 4px 1.4em; }
+
+/* 꼬리 */
+.site-footer { border-top: 1px solid var(--line); background: var(--paper-soft); margin-top: 20px; }
+.site-footer .inner { max-width: var(--max); margin: 0 auto; padding: 18px var(--gutter) 28px; font-size: .9rem; color: var(--ink-soft); }
+.site-footer .inner p { margin: 0 0 6px; }
+.site-footer nav a { margin-right: 12px; }
+
+/* 인쇄 */
+@media print { .site-header, .cta, .nav { display: none; } body { font-size: 11pt; } }
