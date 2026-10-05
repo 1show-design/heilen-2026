@@ -66,7 +66,7 @@ h1 { font-size: 1.45rem; }
 .nav-group b { display: block; color: var(--green-deep); font-size: .95rem; margin-top: 4px; }
 .nav-group ul { grid-template-columns: 1fr; margin-top: 2px; }
 .nav-group li a { border-bottom: 0; padding: 4px 0 4px 10px; font-size: .95rem; }
-.nav-foot { font-size: .88rem; color: var(--ink-soft); margin: 8px 0 0; }
+.nav-foot { grid-column: 1 / -1; font-size: .88rem; color: var(--ink-soft); margin: 4px 0 0; padding-top: 8px; border-top: 1px dashed var(--line); }
 .nav-foot a { color: var(--ink-soft); }
 
 /* 본문 틀 */
