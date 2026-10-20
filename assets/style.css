@@ -189,3 +189,11 @@ figure.hero img { aspect-ratio: 16 / 10; object-fit: cover; }
 
 /* 인쇄 */
 @media print { .site-header, .cta, .nav { display: none; } body { font-size: 11pt; } }
+.site-footer .channels a { color: var(--green-deep); text-decoration: none; margin: 0 2px; }
+.site-footer .channels a:hover { text-decoration: underline; }
+/* 경로 표시(첫 화면 › 묶음 › 쪽) */
+.crumb { font-size: .85rem; color: var(--ink-soft); margin: 10px 0 0; }
+.crumb a { color: var(--green-deep); text-decoration: none; }
+.crumb a:hover { text-decoration: underline; }
+.brand .logo { display: block; height: 32px; width: auto; }
+.brand small { display: block; }
