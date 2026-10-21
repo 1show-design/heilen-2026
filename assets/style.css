@@ -188,6 +188,8 @@ main > .slot-portrait, main > section > .slot-portrait { grid-column: content; }
 
 h1, h2, h3 { font-weight: 300; letter-spacing: -.015em; color: var(--ink); }
 h1 { font-size: 1.55rem; line-height: 1.45; margin: 36px 0 14px; }
+/* 첫 화면 h1 머리의 슬로건(10/22 디렉터 결정): 같은 h1 안에 두어 AI가 슬로건과 사실 문장을 한 제목으로 읽는다 */
+h1 .h1-slogan { display: block; margin-bottom: 10px; font-size: .62em; font-weight: 600; letter-spacing: .12em; color: var(--accent, #00469b); }
 h2 { font-size: 1.45rem; line-height: 1.4; margin: 64px 0 14px; padding-top: 22px; border-top: 1px solid var(--line); }
 h3 { font-size: 1.1rem; font-weight: 500; letter-spacing: -.01em; margin: 30px 0 8px; }
 h2 + h3, h2 + p + h3 { margin-top: 18px; }
@@ -499,4 +501,9 @@ main details + p.muted, main details + h3 { margin-top: 28px; }
 @media (min-width: 960px) { .site-footer { margin-top: 72px; } .site-footer .inner { padding-top: 48px; padding-bottom: 64px; } }
 
 /* 인쇄 */
+/* 제목 글씨체(10/22 디렉터 결정): 큰 제목·절 제목은 네이버 마루 부리(무료·OFL, 네이버 공식 웹폰트), 본문은 Pretendard 그대로 */
+h1, h2, h3 { font-family: "MaruBuri", "Pretendard Variable", serif; font-weight: 400; letter-spacing: -.01em; }
+h1 .h1-slogan { font-family: "Pretendard Variable", Pretendard, sans-serif; }
+.hero-wrap .tagline { font-family: "MaruBuriLight", "MaruBuri", "Pretendard Variable", serif; }
+
 @media print { .site-header, .cta, .nav, .nav-bar, .slot, .slot-badge { display: none; } body { font-size: 11pt; } main { display: block; } }
