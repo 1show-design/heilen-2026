@@ -124,7 +124,8 @@
   "pages": [
    "oerae",
    "chiryo",
-   "index"
+   "amjong-buinam",
+   "amjong-sikdoam"
   ],
   "people": false,
   "w": 1280,
@@ -183,9 +184,7 @@
  {
   "file": "geonmul-oegwan-c.png",
   "alt": "하일렌요양병원 건물 외관(봄)",
-  "pages": [
-   "osineungil"
-  ],
+  "pages": [],
   "people": false,
   "w": 1500,
   "h": 1064,
@@ -485,7 +484,7 @@
   "file": "gonggan-lounge-b.jpg",
   "alt": "벽난로 라운지",
   "pages": [
-   "oerae",
+   "index",
    "faq"
   ],
   "people": false,
@@ -602,9 +601,9 @@
   "file": "oerae-bloom-lounge-b.jpg",
   "alt": "외래센터 블룸 라운지 소파",
   "pages": [
+   "index",
    "oerae",
-   "hoebok",
-   "index"
+   "hoebok"
   ],
   "people": false,
   "w": 1032,
@@ -715,5 +714,17 @@
   "w": 1086,
   "h": 683,
   "src": "pdf/202511_2025겨울호_p2_08.jpg"
+ },
+ {
+  "file": "hero-geonmul-1600.jpg",
+  "alt": "하일렌요양병원 건물 외관(봄)",
+  "pages": [
+   "index",
+   "chiryo"
+  ],
+  "people": false,
+  "w": 1600,
+  "h": 1120,
+  "src": "geonmul-oegwan-c.png 파생 — 투명 귀퉁이 24px씩 잘라 1600폭 JPEG(q76). 첫 화면·치료센터 안내 머리 사진 전용"
  }
 ]

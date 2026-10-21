@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://heilenhospital.com/">
 <meta property="og:image" content="assets/img/gonggan-jeongwon-hangong.jpg">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
-<link rel="stylesheet" href="assets/style.css?v=20261020a">
+<link rel="stylesheet" href="assets/style.css?v=20261021e">
 <!-- 구조화 데이터: 화면에 보이는 것만. sameAs 네 곳(공식 블로그·유튜브·카카오톡 채널·인스타그램)은 아래 「상담」 절과 꼬리 「공식 채널」에 화면 링크로 있다. 이 쪽에는 문답(details)이 없어 FAQPage를 두지 않는다. -->
 <script type="application/ld+json">
 {
@@ -49,7 +49,7 @@
 
 <header class="site-header">
   <div class="bar">
-    <a class="brand" href="index.html"><img src="assets/img/logo2.svg" alt="하일렌요양병원" width="168" height="32" class="logo"><small>암중점 메디컬 레지던스</small></a>
+    <a class="brand" href="index.html"><img src="assets/img/logo2.svg" alt="하일렌요양병원" width="167" height="24" class="logo"><small>암중점 메디컬 레지던스</small></a>
     <a class="tel" href="tel:062-439-1000">062-439-1000</a>
   </div>
   <details class="nav">
@@ -106,12 +106,29 @@
     <p class="nav-foot"><a href="index.html" aria-current="page">첫 화면</a> · <a href="sosik.html">소식</a> · <a href="privacy.html">개인정보처리방침</a></p>
   </div>
 </details>
+  <nav class="nav-bar" aria-label="주요 메뉴">
+    <a href="ipwon.html">입원 안내</a>
+    <a href="oerae.html">단기입원·외래</a>
+    <a href="uiryojin.html">의료진 소개</a>
+    <a href="chiryo.html">치료센터 안내</a>
+    <a href="amjong.html">암종별 회복 안내</a>
+    <a href="program.html">프로그램</a>
+    <a href="doseogwan.html">암정보 도서관</a>
+    <a href="faq.html">자주 묻는 질문</a>
+  </nav>
 </header>
 
-<main>
+<main class="home">
   <p class="crumb">첫 화면</p>
-  <div class="hero-wrap"><img src="assets/img/gonggan-jeongwon-hangong.jpg" alt="병원 정원 전경" width="1280" height="853" loading="eager"><p class="tagline">당신이 기댈 수 있도록,<br>치료부터 회복까지 함께하는 하일렌입니다.</p></div>
-  <p class="hero-cap">하일렌요양병원 정원</p>
+  <div class="hero-wrap">
+    <div class="hero-frame hero-frame-main">
+      <img src="assets/img/hero-geonmul-1600.jpg" alt="하일렌요양병원 건물 외관(봄)" width="1600" height="1120" loading="eager" fetchpriority="high">
+      <span class="slot-badge slot-badge-landscape" data-slot="index-hero-landscape" data-slot-empty data-label="가로 영상 · 16:9 · 1920×1080" aria-hidden="true"></span>
+      <span class="slot-badge slot-badge-portrait" data-slot="index-hero-portrait" data-slot-empty data-label="세로 영상 · 9:16 · 1080×1920" aria-hidden="true"></span>
+      <p class="tagline">당신이 기댈 수 있도록,<br>치료부터 회복까지 함께하는 하일렌입니다.</p>
+    </div>
+    <figure class="hero-frame hero-frame-side"><img src="assets/img/gonggan-jeongwon-hangong.jpg" alt="병원 정원 전경" width="1280" height="853" loading="eager"><figcaption class="hero-cap">하일렌요양병원 정원</figcaption></figure>
+  </div>
 
   <h1>하일렌요양병원은 전남광주 서구에 있는 암요양병원으로, 암 치료 과정의 회복을 돕는 곳입니다.</h1>
 
@@ -119,9 +136,10 @@
 
   <div class="note limit"><strong>이런 경우는 다릅니다.</strong> 장기간 간병이 필요하시면 일반 요양병원을 안내해 드립니다. 야간·응급 대응은 <a href="ipwon.html">입원 안내</a>에서 안내합니다.</div>
 
-  <h2>지금 어느 시기에 계신가요</h2>
+  <section aria-labelledby="sec-sigi">
+  <h2 id="sec-sigi">지금 어느 시기에 계신가요</h2>
   <p>시기에 맞는 안내 페이지로 바로 갑니다.</p>
-  <figure><img src="assets/img/oerae-bloom-lounge.jpg" alt="9층 외래센터 블룸 라운지" width="1280" height="904" loading="lazy"><figcaption>외래센터 블룸</figcaption></figure>
+  <figure><img src="assets/img/oerae-bloom-lounge-b.jpg" alt="외래센터 블룸 라운지 소파" width="1032" height="716" loading="lazy"><figcaption>외래센터 블룸</figcaption></figure>
   <div class="cards three">
     <a class="card" href="ipwon.html">
       <h3>수술 후 회복</h3>
@@ -136,8 +154,10 @@
       <p>떨어진 체력과 신체 기능 회복을 돕습니다. 외래 회복치료와 단기입원을 안내합니다.</p>
     </a>
   </div>
+  </section>
 
-  <h2>외래·입원 안내</h2>
+  <section aria-labelledby="sec-oerae-ipwon">
+  <h2 id="sec-oerae-ipwon">외래·입원 안내</h2>
   <div class="cards three">
     <a class="card" href="ipwon.html">
       <h3>입원</h3>
@@ -152,13 +172,20 @@
       <p>정기적인 외래 진료와 회복 모니터링으로, 치료 이후의 건강한 일상을 이어갑니다.</p>
     </a>
   </div>
+  </section>
 
-  <h2>레지던스 회복공간</h2>
+  <section aria-labelledby="sec-gonggan">
+  <h2 id="sec-gonggan">레지던스 회복공간</h2>
   <p>도심 속 편리한 접근성과 1인실 위주로 구성된 병실, 의료진의 세심한 회복 케어로 치료 이후의 여정을 함께 합니다.</p>
-  <p><a href="chiryo.html">시설 더보기</a></p>
-  <figure><img src="assets/img/byeongsil-1insil-a.jpg" alt="1인실 병실" width="1382" height="1600" loading="lazy"><figcaption>1인실 병실</figcaption></figure>
+  <p class="more"><a href="chiryo.html">시설 더보기</a></p>
+  <div class="duo">
+    <figure><img src="assets/img/byeongsil-1insil-a.jpg" alt="1인실 병실" width="1382" height="1600" loading="lazy"><figcaption>1인실 병실</figcaption></figure>
+    <figure><img src="assets/img/gonggan-lounge-b.jpg" alt="벽난로 라운지" width="1067" height="1600" loading="lazy"><span class="slot-badge" data-slot="index-gonggan-portrait" data-slot-empty data-label="세로 영상 또는 사진 · 9:16 · 1080×1920" aria-hidden="true"></span></figure>
+  </div>
+  </section>
 
-  <h2>치료 프로그램</h2>
+  <section aria-labelledby="sec-chiryo">
+  <h2 id="sec-chiryo">치료 프로그램</h2>
   <p>수술·항암·방사선 치료 기간의 회복에 오롯이 집중합니다.</p>
   <div class="cards three">
     <a class="card" href="chiryo.html">
@@ -174,9 +201,14 @@
       <p>전신온열치료(Whole-body Hyperthermia Chamber)는 전신에 열을 가하는 온열 치료법입니다.</p>
     </a>
   </div>
-  <figure><img src="assets/img/chiryo-goju-onyeol.jpg" alt="고주파온열암치료실" width="1500" height="1071" loading="lazy"><figcaption>고주파온열암치료실</figcaption></figure>
+  <div class="pair">
+    <figure><img src="assets/img/chiryo-goju-onyeol.jpg" alt="고주파온열암치료실" width="1500" height="1071" loading="lazy"><figcaption>고주파온열암치료실</figcaption></figure>
+    <figure class="slot slot-portrait" data-slot="index-chiryo-portrait" data-slot-empty data-label="세로 영상 또는 사진 · 9:16 · 1080×1920" aria-hidden="true"></figure>
+  </div>
+  </section>
 
-  <h2>의료진 소개</h2>
+  <section aria-labelledby="sec-uiryojin">
+  <h2 id="sec-uiryojin">의료진 소개</h2>
   <p>암중점 의료진을 소개합니다.</p>
   <div class="cards three">
     <figure><a href="uiryojin.html"><img src="assets/img/uiryojin-kim-seonghun.jpg" alt="김성훈 수석병원장" width="1413" height="1600" loading="lazy"></a><figcaption><a href="uiryojin.html">김성훈 수석병원장</a></figcaption></figure>
@@ -186,26 +218,32 @@
   <!-- 이춘기 자문의 칸은 발행정본 B-7-2 블로커(국내 면허·소속 증빙 2건) 해제 전까지 접어 둔다. uiryojin.html과 같은 시점에 펼친다.
        <figure><a href="uiryojin.html"><img src="assets/img/uiryojin-lee-chungi.jpg" alt="이춘기 자문의" width="1413" height="1600" loading="lazy"></a><figcaption><a href="uiryojin.html">이춘기 자문의</a>(원내에 상근하지 않으며 자문으로 참여합니다)</figcaption></figure> -->
   <p class="doctor-link"><a href="uiryojin.html">의료진 소개 바로가기</a></p>
+  </section>
 
-  <h2>암정보 도서관</h2>
-  <p><a href="doseogwan.html">암정보 도서관 바로가기 →</a></p>
+  <section aria-labelledby="sec-doseogwan">
+  <h2 id="sec-doseogwan">암정보 도서관</h2>
+  <p class="more"><a href="doseogwan.html">암정보 도서관 바로가기 →</a></p>
 
   <figure><img src="assets/img/program-pyeonbaek-trekking-a.jpg" alt="편백숲 트레킹 숲길" width="1000" height="756" loading="lazy"><figcaption>편백숲 트레킹</figcaption></figure>
+  </section>
 
-  <h2>인증 내역</h2>
-  <figure><img src="assets/img/injeung-yoyangbyeongwon.png" alt="보건복지부 요양병원 인증 의료기관(2025.02.06~2029.02.05)" width="1600" height="318" loading="lazy"><figcaption>보건복지부 요양병원 인증 의료기관(2025.02.06~2029.02.05)</figcaption></figure>
+  <section aria-labelledby="sec-injeung">
+  <h2 id="sec-injeung">인증 내역</h2>
+  <figure class="cert"><img src="assets/img/injeung-yoyangbyeongwon.png" alt="보건복지부 요양병원 인증 의료기관(2025.02.06~2029.02.05)" width="1600" height="318" loading="lazy"><figcaption>보건복지부 요양병원 인증 의료기관(2025.02.06~2029.02.05)</figcaption></figure>
+  </section>
 
-  <div class="related">
-    <h2>함께 보기</h2>
+  <section class="related" aria-labelledby="sec-related">
+    <h2 id="sec-related">함께 보기</h2>
     <ul>
       <li><a href="ipwon.html">입원 안내</a></li>
       <li><a href="oerae.html">단기입원·외래</a></li>
       <li><a href="faq.html">자주 묻는 질문</a></li>
       <li><a href="amjong.html">암종별 회복 안내</a></li>
     </ul>
-  </div>
+  </section>
 
-  <h2>상담</h2>
+  <section aria-labelledby="sec-sangdam">
+  <h2 id="sec-sangdam">상담</h2>
   <p>궁금한 점 있으시면 언제든 물어보세요. 카카오톡 채널에서 입원 상담 및 프로그램 예약이 가능합니다. 단기입원 예약접수 받습니다.</p>
   <div class="cta">
     <a class="btn primary" href="https://pf.kakao.com/_hrVAG">카카오톡 채널로 문의</a>
@@ -213,6 +251,7 @@
   </div>
   <p class="cta-note">입원·외래·단기입원 상담은 원내 상담실에서 안내합니다.</p>
   <p>소식과 안내 글은 <a href="https://blog.naver.com/hello_heilen">공식 블로그</a>와 <a href="https://www.youtube.com/@hello_heilen">공식 유튜브</a>에서도 보실 수 있습니다.</p>
+  </section>
 
   <p class="source"><b>제공</b> 하일렌요양병원 · <b>갱신</b> 2026-10-21</p>
 </main>
@@ -221,7 +260,7 @@
   <div class="inner">
     <p><strong>하일렌요양병원</strong> · 61928 전남광주통합특별시 서구 상무대로 1176 · 대표번호 062-439-1000</p>
     <p>대표 김성훈, 장익완 · 사업자등록번호 598-90-02054 · 개인정보 보호책임자 장익완(heilen231023@naver.com)</p>
-    <nav><a href="chiryo.html">병원소개</a><a href="ipwon.html">입원 안내</a><a href="faq.html">자주 묻는 질문</a><a href="biyong.html">비급여 항목 안내</a><a href="privacy.html">개인정보처리방침</a><a href="osineungil.html">오시는 길</a><a href="sosik.html">소식</a></nav>
+    <nav aria-label="꼬리 메뉴"><a href="chiryo.html">병원소개</a> <a href="ipwon.html">입원 안내</a> <a href="faq.html">자주 묻는 질문</a> <a href="biyong.html">비급여 항목 안내</a> <a href="privacy.html">개인정보처리방침</a> <a href="osineungil.html">오시는 길</a> <a href="sosik.html">소식</a></nav>
     <p class="channels">공식 채널 <a href="https://blog.naver.com/hello_heilen">네이버 블로그</a> · <a href="https://www.youtube.com/@hello_heilen">유튜브</a> · <a href="https://www.instagram.com/heilen_medical">인스타그램</a> · <a href="https://pf.kakao.com/_hrVAG">카카오톡 채널</a></p>
     <p>Copyright © 하일렌요양병원. All rights reserved. / Hosting by CAFE24 / Design by ZINIDAMI</p>
   </div>
