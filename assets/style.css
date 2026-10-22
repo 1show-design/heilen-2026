@@ -261,7 +261,9 @@ b { font-weight: 600; }
   .cards.three { grid-template-columns: repeat(3, 1fr); gap: 0 28px; }
   .cards.two { grid-template-columns: 1fr 1fr; gap: 0 28px; }
 }
-@media (min-width: 960px) { .cards.three, .cards.two { gap: 0 40px; } .card { padding: 22px 0 28px; } }
+.cards.four { grid-template-columns: repeat(2, 1fr); gap: 0 14px; }   /* 의료진 네 분: 휴대폰 2×2, 넓은 화면 한 줄 */
+@media (min-width: 720px) { .cards.four { grid-template-columns: repeat(4, 1fr); gap: 0 24px; } }
+@media (min-width: 960px) { .cards.three, .cards.two, .cards.four { gap: 0 40px; } .card { padding: 22px 0 28px; } }
 .doctor-link { margin-top: 6px; }
 /* 링크 하나만 든 문단(「시설 더보기」 등): 보이는 줄은 그대로 두고 누르는 높이만 44px 로 */
 .more a, .doctor-link a, ul.links a, .facts dd a[href^="tel:"] { display: inline-block; padding: 12px 0; margin: -12px 0; }
@@ -535,5 +537,7 @@ body { padding-bottom: 52px; }
 .toc li { margin: 0; padding: 0; }
 .toc li a { display: inline-block; padding: 4px 0; min-height: 32px; color: var(--ink); text-decoration: none; font-size: .92rem; }
 .toc li a:hover { color: var(--accent); text-decoration: underline; }
+
+.home .lead strong { display: block; margin-bottom: 8px; font-family: "MaruBuri", "Pretendard Variable", serif; font-weight: 400; font-size: 1.2em; line-height: 1.5; letter-spacing: -.01em; color: var(--ink); }   /* 첫 화면 경구 한 줄(10/22 3안) */
 
 @media print { .site-header, .cta, .nav, .nav-bar, .dock, .toc, .slot, .slot-badge { display: none; } body { font-size: 11pt; } main { display: block; } }
