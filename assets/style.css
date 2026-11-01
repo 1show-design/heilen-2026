@@ -540,13 +540,13 @@ body { padding-bottom: 52px; }
 
 .home .lead strong { display: block; margin-bottom: 8px; font-family: "MaruBuri", "Pretendard Variable", serif; font-weight: 400; font-size: 1.2em; line-height: 1.5; letter-spacing: -.01em; color: var(--ink); }   /* 첫 화면 경구 한 줄(10/22 3안) */
 
-/* ───────── 11/1 화면 정리(디렉터: PC·모바일 모두 한쪽으로 쏠리지 않고 조화롭게, 사진은 예시안 + [변경예정]) ─────────
+/* ───────── 11/1 화면 정리(디렉터: PC·모바일 모두 한쪽으로 쏠리지 않고 조화롭게, 사진은 예시안 + [변경가능]) ─────────
    1. 본문 사진은 원본 크기가 아니라 틀에 꽉 차게, 가운데, 같은 비율로 그린다. 사진을 모두 새로 찍기로 해서 원본 크기 규율(위 328행)을 걷어낸다.
-      작은 원본은 잠시 흐려 보일 수 있으나 [변경예정] 자리다.
+      작은 원본은 잠시 흐려 보일 수 있으나 [변경가능] 자리다.
    2. 첫 화면 상담 단추 줄은 글 열 폭을 다 쓴다.
    3. 의료진 사진 칸: 휴대폰에서는 사진을 위에 두고 글은 화면 폭을 다 쓴다(110px 옆 215px 글 열 문제).
    4. 바로가기 쪽 단추·여러 열 목록.
-   5. [변경예정] 표식. Cafe24 산출물 전에는 사진을 바꾸고 mark_photo_todo.py 로 표식을 뗀다. */
+   5. [변경가능] 표식. Cafe24 산출물 전에는 사진을 바꾸고 mark_photo_todo.py 로 표식을 뗀다. */
 main > figure:not(.hero):not(.small):not(.tall):not(.cert):not(.slot-portrait):not(.garden) img,
 main > section > figure:not(.hero):not(.small):not(.tall):not(.cert):not(.slot-portrait):not(.garden) img,
 .pair > figure:not(.slot-portrait) img {
@@ -597,7 +597,7 @@ details ul.links > li { padding: 8px 0; }
   main > figure.ph-todo:not(.tall):not(.small)::before, main > section > figure.ph-todo:not(.tall):not(.small)::before { left: var(--gutter); }
   main > figure.tall > figcaption, main > section > figure.tall > figcaption { padding: 0; }
 }
-/* 세로 자리 배지(.slot-badge, 오른쪽 위)가 있는 두 장 사진에서는 [변경예정] 표식을 아래로 내려 겹치지 않게 */
+/* 세로 자리 배지(.slot-badge, 오른쪽 위)가 있는 두 장 사진에서는 [변경가능] 표식을 아래로 내려 겹치지 않게 */
 .duo .ph-todo::before { top: auto; bottom: 10px; left: 10px; }
 @media (max-width: 559px) { .duo .ph-todo:has(.slot-badge)::before { bottom: 44px; } }
 /* 문답이 아닌 접는 상자(data-nofaq)에는 「Q」를 붙이지 않는다 */
