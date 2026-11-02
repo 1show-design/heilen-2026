@@ -629,6 +629,8 @@ main > section.hyeopryeok > h2 { border-top: 0; padding-top: 0; margin-top: 0; }
   .logo-row .logo-track[aria-hidden] { display: none; }
   .logo-track { flex-wrap: wrap; justify-content: center; row-gap: 12px; }
 }
+.hero-wrap .tagline br.m-br { display: none; }
+@media (max-width: 559px) { .hero-wrap .tagline br.m-br { display: inline; } }
 @media print { .logo-row { animation: none; } .logo-track[aria-hidden], .logo-row.to-right { display: none; } .logo-track { flex-wrap: wrap; } }
 
 /* 11/1 프로그램 쪽 맨 위 목록 — 디렉터 「각 프로그램을 제일 위에 나열」 */
