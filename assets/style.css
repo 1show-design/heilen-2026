@@ -370,7 +370,7 @@ figure.hero-natural img { aspect-ratio: auto; max-height: none; }
 .pair .slot-portrait { width: min(100%, 56vw); justify-self: center; }   /* 휴대폰: 세로 자리는 가로 사진 아래 가운데 */
 @media (min-width: 720px) {
   .pair { grid-template-columns: 1.55fr 1fr; gap: 28px; align-items: stretch; }
-  .pair > figure:not(.slot-portrait) { display: flex; flex-direction: column; }
+  .pair > figure:not(.slot-portrait) { display: flex; flex-direction: column; justify-content: flex-end; }   /* 가로 사진 둘이 짝이면 아랫선을 맞춘다 */
   .pair > figure:not(.slot-portrait) img { flex: 0 0 auto; }
   .pair .slot-portrait { height: calc(100% - 2.6em); width: auto; max-width: 100%; justify-self: start; align-self: start; }
   .pair > figure:only-child { grid-column: 1 / -1; }   /* Cafe24 산출물처럼 빈 자리가 빠지면 남은 사진이 두 칸을 쓰되 원본보다 늘리지 않는다(위 사진 크기 규율) */
