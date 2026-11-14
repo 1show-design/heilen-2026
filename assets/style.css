@@ -794,7 +794,7 @@ ul.lib-geul > li > a::before { content: "글"; }
 /* ── 11/15 디렉터 지시: 첫 화면 병실 종류별 사진 — 1인실 계열(일반 1인실·특실·VIP실)은 크게, 2인실·4인실은 작게 ── */
 .cards.rooms { grid-template-columns: repeat(6, 1fr); gap: 6px 12px; align-items: start; }
 .cards.rooms > * { grid-column: span 3; min-width: 0; }
-.cards.rooms > .r-main:first-child { grid-column: span 6; }
+.cards.rooms > .r-main { grid-column: span 6; }   /* 휴대폰: VIP실·특실·1인실을 한 장씩 크게 */
 .cards.rooms > .r-sub { grid-column: span 2; }
 .cards.rooms figure img, .cards.rooms .slot { aspect-ratio: 4 / 3; width: 100%; }
 .cards.rooms .slot { margin: 0; }
@@ -803,6 +803,17 @@ ul.lib-geul > li > a::before { content: "글"; }
 .cards.rooms .room-cap a:hover { color: var(--accent); }
 @media (min-width: 720px) {
   .cards.rooms { grid-template-columns: repeat(12, 1fr); gap: 0 20px; }
-  .cards.rooms > .r-main, .cards.rooms > .r-main:first-child { grid-column: span 4; }
+  .cards.rooms > .r-main { grid-column: span 4; }
   .cards.rooms > .r-sub { grid-column: span 2; }
 }
+
+/* ── 11/15 디렉터 지시: 층별 안내 사진, 입원 안내 식단 사진 ── */
+.floors .fl-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+.floors .fl-photos figure { margin: 0; }
+.floors .fl-photos img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.floors .fl-photos figcaption { margin-top: 6px; font-size: .74rem; }
+@media (min-width: 720px) { .floors .fl-photos { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
+figure.meals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+figure.meals img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
+figure.meals figcaption { grid-column: 1 / -1; }
+@media (min-width: 720px) { figure.meals { grid-template-columns: repeat(6, 1fr); gap: 8px; } }
