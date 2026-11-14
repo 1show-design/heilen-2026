@@ -790,3 +790,19 @@ ul.lib-geul > li > a::before,
 }
 ul.lib-geul > li > a::before { content: "글"; }
 .related.lib-kaellum li > a::before { content: "칼럼"; color: var(--accent); border-color: var(--accent); }
+
+/* ── 11/15 디렉터 지시: 첫 화면 병실 종류별 사진 — 1인실 계열(일반 1인실·특실·VIP실)은 크게, 2인실·4인실은 작게 ── */
+.cards.rooms { grid-template-columns: repeat(6, 1fr); gap: 6px 12px; align-items: start; }
+.cards.rooms > * { grid-column: span 3; min-width: 0; }
+.cards.rooms > .r-main:first-child { grid-column: span 6; }
+.cards.rooms > .r-sub { grid-column: span 2; }
+.cards.rooms figure img, .cards.rooms .slot { aspect-ratio: 4 / 3; width: 100%; }
+.cards.rooms .slot { margin: 0; }
+.cards.rooms .room-cap { margin: 10px 0 8px; font-size: .78rem; letter-spacing: .03em; }
+.cards.rooms .room-cap a { display: inline-block; padding: 12px 0; color: var(--ink); text-decoration: none; }
+.cards.rooms .room-cap a:hover { color: var(--accent); }
+@media (min-width: 720px) {
+  .cards.rooms { grid-template-columns: repeat(12, 1fr); gap: 0 20px; }
+  .cards.rooms > .r-main, .cards.rooms > .r-main:first-child { grid-column: span 4; }
+  .cards.rooms > .r-sub { grid-column: span 2; }
+}
