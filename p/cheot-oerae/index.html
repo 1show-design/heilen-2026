@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="하일렌요양병원에서 처음 외래 진료를 받으시는 날 챙겨 오실 것, 도착 후 가시는 곳, 치료별 걸리는 시간을 안내하는 검토용 초안입니다.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="하일렌요양병원">
+<meta property="og:title" content="처음 외래 진료 안내 (검토용 초안) | 하일렌요양병원">
+<meta property="og:description" content="하일렌요양병원에서 처음 외래 진료를 받으시는 날 챙겨 오실 것, 도착 후 가시는 곳, 치료별 걸리는 시간을 안내하는 검토용 초안입니다.">
+<title>처음 외래 진료 안내 (검토용 초안) | 하일렌요양병원</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+<style>
+/* 레이아웃: 홈페이지 2026 「에디토리얼 절제」를 따른 한 단 글 폭(760px), 흰 바탕·1px 선·남색 하나, 모서리 없음. 맨 아래에 검토용 확인 목록 부록 */
+:root {
+  --paper: #ffffff;
+  --paper-soft: #f6f7f9;
+  --ink: #15181d;
+  --ink-soft: #5b6470;
+  --line: #e4e6ea;
+  --line-strong: #c9ccd2;
+  --accent: #00469b;
+  --accent-pale: #eef3fb;
+  --accent-line: #d6e1f2;
+  --sand: #faf8f3;
+  --amber: #a35a00;
+  --amber-pale: #fff3dc;
+  --wait: #5a4a8a;
+  --wait-pale: #f3f0fa;
+  --font-body: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --max: 760px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111418; --paper-soft: #181c22; --ink: #e8eaee; --ink-soft: #a6aeb9;
+    --line: #2a2f37; --line-strong: #3d434d; --accent: #8ab4ff; --accent-pale: #15223a; --accent-line: #263a5c;
+    --sand: #191b1f; --amber: #f2b766; --amber-pale: #33250f; --wait: #b9a8f0; --wait-pale: #211c33;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111418; --paper-soft: #181c22; --ink: #e8eaee; --ink-soft: #a6aeb9;
+  --line: #2a2f37; --line-strong: #3d434d; --accent: #8ab4ff; --accent-pale: #15223a; --accent-line: #263a5c;
+  --sand: #191b1f; --amber: #f2b766; --amber-pale: #33250f; --wait: #b9a8f0; --wait-pale: #211c33;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 16px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.8;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: calc(var(--max) + 64px);
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* 검토용 띠 */
+.draft { background: var(--amber-pale); border-bottom: 1px solid var(--amber); color: var(--ink); }
+.draft .wrap { padding-block: 14px; display: grid; gap: 6px; font-size: .86rem; line-height: 1.65; }
+.draft strong { color: var(--amber); font-weight: 700; letter-spacing: .02em; }
+.draft a { color: var(--amber); font-weight: 500; }
+
+/* 머리 */
+.site { border-bottom: 1px solid var(--line); }
+.site .wrap { padding-block: 14px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; }
+.site .name { font-weight: 700; letter-spacing: -.01em; }
+.site .crumb { color: var(--ink-soft); font-size: .82rem; }
+
+main .wrap { padding-block: 32px 8px; }
+h1, h2, h3 { text-wrap: balance; letter-spacing: -.02em; color: var(--ink); }
+h1 { font-weight: 300; font-size: clamp(1.6rem, 6.2vw, 2.3rem); line-height: 1.35; margin: 0 0 20px; }
+h2 { font-weight: 300; font-size: clamp(1.3rem, 4.8vw, 1.65rem); line-height: 1.4; margin: 0 0 14px; }
+h3 { font-weight: 600; font-size: 1.02rem; line-height: 1.5; margin: 0 0 6px; }
+p { margin: 0 0 14px; }
+.lead { font-size: 1.08rem; line-height: 1.75; color: var(--ink-soft); margin-bottom: 24px; }
+.lead strong { color: var(--ink); font-weight: 500; }
+
+section.q { border-top: 1px solid var(--line); padding-block: 36px 20px; }
+.qno { display: block; font-size: .78rem; letter-spacing: .08em; color: var(--accent); font-weight: 600; margin-bottom: 6px; }
+
+/* 값 표시 */
+.todo {
+  background: var(--amber-pale); color: var(--amber);
+  border: 1px dashed var(--amber); padding: 0 6px; font-size: .86em; font-weight: 500;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.val { border-bottom: 2px dotted var(--amber); }
+
+/* 한눈에 보기 표 */
+dl.facts { margin: 0 0 28px; border-top: 1px solid var(--line); }
+dl.facts > div { display: grid; grid-template-columns: 1fr; gap: 2px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+dl.facts dt { font-size: .82rem; color: var(--ink-soft); font-weight: 500; letter-spacing: .02em; }
+dl.facts dd { margin: 0; min-width: 0; }
+@media (min-width: 600px) { dl.facts > div { grid-template-columns: 8.5em 1fr; gap: 16px; } }
+
+/* 오시는 날 순서 */
+ol.flow { list-style: none; margin: 0 0 18px; padding: 0; counter-reset: s; display: grid; gap: 0; }
+ol.flow > li { counter-increment: s; position: relative; padding: 0 0 22px 46px; min-width: 0; }
+ol.flow > li::before {
+  content: counter(s); position: absolute; left: 0; top: 2px;
+  width: 30px; height: 30px; display: grid; place-items: center;
+  border: 1px solid var(--accent); color: var(--accent); background: var(--paper);
+  font-size: .85rem; font-weight: 600; font-variant-numeric: tabular-nums;
+}
+ol.flow > li::after { content: ""; position: absolute; left: 15px; top: 34px; bottom: 4px; width: 1px; background: var(--accent-line); }
+ol.flow > li:last-child::after { display: none; }
+ol.flow > li:last-child { padding-bottom: 4px; }
+ol.flow h3 { margin-bottom: 2px; }
+ol.flow p { margin-bottom: 6px; }
+
+/* 차례 */
+nav.toc { background: var(--paper-soft); border: 1px solid var(--line); padding: 16px 18px; margin: 8px 0 8px; }
+nav.toc p { font-size: .82rem; color: var(--ink-soft); margin-bottom: 8px; font-weight: 500; letter-spacing: .02em; }
+nav.toc ol { margin: 0; padding-left: 1.3em; display: grid; gap: 2px; }
+nav.toc a { display: inline-block; padding-block: 6px; text-decoration: none; }
+nav.toc a:hover { text-decoration: underline; }
+
+ul.plain { margin: 0 0 16px; padding-left: 1.1em; display: grid; gap: 6px; }
+ul.check { list-style: none; margin: 0 0 18px; padding: 0; border-top: 1px solid var(--line); }
+ul.check > li { padding: 11px 0 11px 30px; border-bottom: 1px solid var(--line); position: relative; }
+ul.check > li::before { content: ""; position: absolute; left: 2px; top: 17px; width: 15px; height: 15px; border: 1.5px solid var(--accent); }
+
+.note { background: var(--sand); border: 1px solid var(--line); padding: 16px 18px; margin: 18px 0; }
+.note p:last-child { margin-bottom: 0; }
+.note.limit { background: var(--accent-pale); border-color: var(--accent-line); }
+.note.limit strong { color: var(--accent); font-weight: 600; }
+.note.wait { background: var(--wait-pale); border: 1px dashed var(--wait); }
+.note.wait .tag { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .06em; color: var(--wait); margin-bottom: 6px; }
+
+/* 치료별 시간 표: 넓으면 표, 좁으면 칸마다 이름표 */
+.tablebox { margin: 4px 0 18px; }
+table.time { width: 100%; border-collapse: collapse; font-size: .95rem; }
+table.time th, table.time td { text-align: left; vertical-align: top; padding: 12px 10px 12px 0; border-bottom: 1px solid var(--line); }
+table.time thead th { font-size: .8rem; color: var(--ink-soft); font-weight: 500; letter-spacing: .02em; border-bottom: 1px solid var(--line-strong); }
+table.time tbody th { font-weight: 600; width: 34%; }
+@media (max-width: 599px) {
+  table.time thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table.time, table.time tbody, table.time tr, table.time th, table.time td { display: block; width: 100%; }
+  table.time tr { border-bottom: 1px solid var(--line); padding-block: 12px; }
+  table.time tr:first-child { border-top: 1px solid var(--line-strong); }
+  table.time th, table.time td { border: 0; padding: 2px 0; }
+  table.time tbody th { width: 100%; font-size: 1rem; margin-bottom: 4px; }
+  table.time td::before { content: attr(data-label); display: block; font-size: .76rem; color: var(--ink-soft); letter-spacing: .02em; }
+}
+
+/* 문의 */
+.contact { border: 1px solid var(--accent); padding: 20px; margin: 30px 0 10px; display: grid; gap: 10px; }
+.contact h2 { margin: 0; font-size: 1.25rem; }
+.contact .row { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.contact .row span { font-weight: 500; }
+.contact .row small { color: var(--ink-soft); font-size: .8rem; display: block; font-weight: 400; }
+ul.links { list-style: none; margin: 0 0 24px; padding: 0; border-top: 1px solid var(--line); }
+ul.links li { border-bottom: 1px solid var(--line); }
+ul.links a { display: flex; justify-content: space-between; gap: 12px; padding-block: 12px; text-decoration: none; }
+ul.links a::after { content: "→"; }
+
+footer.site-foot { border-top: 1px solid var(--line); margin-top: 18px; }
+footer.site-foot .wrap { padding-block: 22px 30px; font-size: .84rem; color: var(--ink-soft); display: grid; gap: 8px; }
+footer.site-foot p { margin: 0; }
+
+/* 검토용 부록 */
+.appendix { background: var(--paper-soft); border-top: 3px double var(--amber); margin-top: 12px; }
+.appendix .wrap { padding-block: 34px 48px; }
+.appendix .eyebrow { font-size: .78rem; font-weight: 700; color: var(--amber); letter-spacing: .08em; margin-bottom: 6px; display: block; }
+.appendix h2 { margin-bottom: 10px; }
+.appendix h3 { margin: 26px 0 8px; font-size: .95rem; color: var(--accent); letter-spacing: .01em; }
+ol.cl { margin: 0; padding: 0; list-style: none; counter-reset: c; border-top: 1px solid var(--line); }
+ol.cl > li { counter-increment: c; display: grid; grid-template-columns: 2.4em 1fr; gap: 0 8px; padding-block: 10px; border-bottom: 1px solid var(--line); font-size: .93rem; line-height: 1.65; }
+ol.cl > li::before { content: counter(c); font-variant-numeric: tabular-nums; color: var(--amber); font-weight: 700; padding-top: 1px; }
+ol.cl > li > div { min-width: 0; }
+ol.cl .ask { font-weight: 500; }
+ol.cl .ref { color: var(--ink-soft); font-size: .85rem; display: block; margin-top: 2px; }
+ol.cl .ref b { color: var(--ink); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="draft" role="note">
+  <div class="wrap">
+    <p style="margin:0"><strong>검토용 초안 · 홈페이지 게시 전 · 2026-11-14</strong></p>
+    <p style="margin:0"><span class="todo">[디렉터 확인]</span> 표시는 병원 확인 전 값입니다. 점선 밑줄이 그어진 값은 새 홈페이지 검토본에 이미 적힌 표기를 옮긴 것이고, 표시만 있는 칸은 아직 비어 있는 값입니다. 확인할 값은 <a href="#checklist">맨 아래 확인 목록</a>에 모았습니다.</p>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <span class="name">하일렌요양병원</span>
+    <span class="crumb">첫 화면 › 이용 안내 › 처음 외래 진료 안내</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>처음 외래 진료를 받으러 오시는 날, 무엇을 준비하고 어디로 가나요?</h1>
+    <p class="lead"><strong>신분증과 첫 진료 서류<span class="todo">[디렉터 확인: 서류 이름]</span>를 챙겨 예약 시간보다 <span class="todo">[디렉터 확인: 몇 분]</span> 일찍 도착해 주세요.</strong> 접수는 <span class="val">2층 원무과</span><span class="todo">[디렉터 확인]</span>에서 하시고, 처음 한 번은 <span class="val">2층 상담실</span><span class="todo">[디렉터 확인]</span>에서 치료 일정 담당자를 만나십니다. 머무시는 시간은 받으시는 치료에 따라 다르며, 치료별 시간은 아래 표에 있습니다.</p>
+
+    <dl class="facts">
+      <div><dt>외래 진료 접수</dt><dd><span class="val">월~금 09:00~17:30(점심 12:30~13:30), 토 09:00~12:00, 일·공휴일 쉼</span> <span class="todo">[디렉터 확인]</span></dd></div>
+      <div><dt>접수하는 곳</dt><dd><span class="val">2층 원무과</span> <span class="todo">[디렉터 확인]</span></dd></div>
+      <div><dt>챙겨 오실 것</dt><dd>신분증 · 첫 진료 서류 · 드시는 약 <span class="todo">[디렉터 확인]</span></dd></div>
+      <div><dt>문의</dt><dd><span class="val">원내 상담실 · 카카오톡 채널 · 062-439-1000</span> <span class="todo">[디렉터 확인]</span></dd></div>
+    </dl>
+
+    <h2>오시는 날은 이렇게 진행됩니다</h2>
+    <p>순서 <span class="todo">[디렉터 확인: 첫 방문 순서]</span></p>
+    <ol class="flow">
+      <li><h3>예약과 안내 문자</h3><p>예약이 정해지면 안내 문자를 받으십니다.</p></li>
+      <li><h3>도착</h3><p><span class="val">1층에서 중앙 엘리베이터를 타고 2층으로</span> 올라오세요.</p></li>
+      <li><h3><span class="val">2층 원무과</span> 접수</h3><p>신분증과 서류를 내고 접수합니다.</p></li>
+      <li><h3><span class="val">2층 상담실</span></h3><p>처음 한 번은 치료 일정 담당자를 만나 일정을 정합니다.</p></li>
+      <li><h3>혈압 측정과 주치의 진료</h3><p>주치의가 진료한 후 받으실 회복치료를 처방합니다.</p></li>
+      <li><h3>치료실에서 치료</h3><p>처방받으신 치료실로 이동해 치료를 받으십니다.</p></li>
+      <li><h3>다음 일정 확인</h3><p>다음 일정을 확인하고 귀가하십니다.</p></li>
+    </ol>
+
+    <nav class="toc" aria-label="이 쪽 차례">
+      <p>이 쪽 차례</p>
+      <ol>
+        <li><a href="#q-yeyak">예약과 안내 문자</a></li>
+        <li><a href="#q-dongseon">도착 후 가시는 곳</a></li>
+        <li><a href="#q-sigan">치료별 걸리는 시간</a></li>
+        <li><a href="#q-junbi">옷차림과 준비물</a></li>
+        <li><a href="#q-siksa">식사 신청</a></li>
+        <li><a href="#q-byeongyeong">일정 변경과 취소</a></li>
+        <li><a href="#q-jeonyeok">늦게 도착하시거나 저녁에 오실 때</a></li>
+        <li><a href="#q-biyong">비용과 서류 문의</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="q" id="q-yeyak" aria-labelledby="h-yeyak">
+    <div class="wrap">
+      <span class="qno">질문 1</span>
+      <h2 id="h-yeyak">예약은 어떻게 하나요? 예약 안내 문자는 언제 오나요?</h2>
+      <p>첫 외래 진료 예약은 원내 상담실에서 받습니다. 전화 <span class="val">062-439-1000</span><span class="todo">[디렉터 확인]</span>이나 카카오톡 채널로 연락해 주세요.</p>
+      <p>외래 진료 날짜는 다니시는 대학병원·암병원의 항암·방사선 치료와 진료 일정을 먼저 적어 두고, 그 일정이 없는 날 가운데 원내 상담실과 함께 정합니다.</p>
+      <h3>예약하실 때 알려 주실 것</h3>
+      <ul class="plain">
+        <li>진단받으신 암과 받으신 수술 이름</li>
+        <li>앞으로의 항암·방사선 치료 일정</li>
+        <li>케모포트가 있는지</li>
+        <li>받고 싶으신 회복치료</li>
+      </ul>
+      <h3>예약 안내 문자</h3>
+      <p>예약이 정해지면 안내 문자를 보냅니다. 문자는 <span class="todo">[디렉터 확인: 예약이 정해진 직후인지, 오시기 전날인지]</span> 보냅니다. 문자에는 <span class="todo">[디렉터 확인: 날짜·시간·치료 이름·도착할 곳·식사 신청 안내 가운데 들어가는 것]</span>이 들어 있습니다.</p>
+      <p>안내 문자를 받지 못하셨거나, 통화로 정하신 시간과 문자의 시간이 다르면 원내 상담실에 알려 주세요.</p>
+    </div>
+  </section>
+
+  <section class="q" id="q-dongseon" aria-labelledby="h-dongseon">
+    <div class="wrap">
+      <span class="qno">질문 2</span>
+      <h2 id="h-dongseon">도착하면 어디로 가나요?</h2>
+      <p class="lead"><strong>1층에서 중앙 엘리베이터를 타고 2층 원무과로 오시면 됩니다.</strong> <span class="todo">[디렉터 확인]</span></p>
+      <ol class="flow">
+        <li>
+          <h3>차로 오실 때와 대중교통으로 오실 때</h3>
+          <p>주차 안내는 <span class="todo">[디렉터 확인: 주차장 위치·주차 요금·발렛파킹]</span>입니다.</p>
+          <p>지하철은 <span class="val">농성역 1번 출구에서 걸어서 약 8분, 돌고개역 3번 출구에서 걸어서 약 10분</span>입니다. 버스는 <span class="val">서구청 정류장에서 걸어서 약 8분</span>입니다. <span class="todo">[디렉터 확인]</span></p>
+        </li>
+        <li>
+          <h3>1층</h3>
+          <p>건물에 들어오시면 1층에서 <span class="todo">[디렉터 확인: 하실 일]</span>을 하신 후, 중앙 엘리베이터를 타고 2층으로 올라오세요. <span class="val">휠체어로 출입하실 수 있습니다.</span> <span class="todo">[디렉터 확인]</span></p>
+        </li>
+        <li>
+          <h3>2층 원무과에서 접수</h3>
+          <p>신분증과 첫 진료 서류를 내고 접수합니다. <span class="todo">[디렉터 확인]</span></p>
+        </li>
+        <li>
+          <h3>2층 상담실에서 치료 일정 정하기</h3>
+          <p><span class="val">처음 한 번은 2층 상담실에서 치료 일정 담당자를 만나십니다. 그 후의 일정 조정과 치료 계획은 카카오톡 채널로 주고받습니다.</span> <span class="todo">[디렉터 확인]</span></p>
+        </li>
+        <li>
+          <h3>혈압 측정과 주치의 진료</h3>
+          <p>진료 전에 혈압을 잽니다. 혈압을 재는 곳은 <span class="todo">[디렉터 확인]</span>이고, 진료실은 <span class="todo">[디렉터 확인: 층]</span>에 있습니다.</p>
+          <p>어떤 회복치료를 받으실지는 주치의가 진료한 후 처방합니다. 그래서 같은 날 오셔도 분마다 받으시는 치료가 다를 수 있습니다.</p>
+        </li>
+        <li>
+          <h3>치료실로 이동</h3>
+          <p>처방받으신 치료실로 이동합니다. 치료실은 치료마다 <span class="todo">[디렉터 확인: 층]</span>에 있습니다. <span class="val">외래센터 블룸은 9층</span>에 있습니다. <span class="todo">[디렉터 확인]</span></p>
+        </li>
+        <li>
+          <h3>다음 일정 확인</h3>
+          <p>다음 일정을 정하는 방법은 <span class="todo">[디렉터 확인: 그 자리에서 정하는지, 카카오톡 채널로 받으시는지]</span>입니다.</p>
+        </li>
+      </ol>
+      <div class="note limit">
+        <p><strong>오시기 전에 한 번 더 확인해 주세요.</strong> 오시는 요일과 시간에 따라 접수하는 곳이 달라질 수 있습니다 <span class="todo">[디렉터 확인: 요일·시간별 접수 장소]</span>. 어디로 가실지 헷갈리시면 출발 전에 원내 상담실에 물어보세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="q" id="q-sigan" aria-labelledby="h-sigan">
+    <div class="wrap">
+      <span class="qno">질문 3</span>
+      <h2 id="h-sigan">치료별로 얼마나 걸리나요?</h2>
+      <p>머무시는 시간은 접수와 진료에 걸리는 시간에 받으시는 치료 시간을 더한 만큼입니다. 치료 시간은 아래와 같고, 몸 상태와 처방에 따라 달라질 수 있습니다. <span class="todo">[디렉터 확인]</span></p>
+      <div class="tablebox">
+        <table class="time">
+          <thead><tr><th scope="col">무엇</th><th scope="col">걸리는 시간</th><th scope="col">오시기 전에 알아 두실 것</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">첫 방문 접수·상담·진료</th><td data-label="걸리는 시간"><span class="todo">[디렉터 확인]</span></td><td data-label="오시기 전에 알아 두실 것">예약 시간보다 <span class="todo">[디렉터 확인: 몇 분]</span> 일찍 도착해 주세요.</td></tr>
+            <tr><th scope="row">주사 (면역 주사제·고용량 비타민C)</th><td data-label="걸리는 시간"><span class="todo">[디렉터 확인]</span></td><td data-label="오시기 전에 알아 두실 것">맞으실 주사는 주치의 진료에서 정합니다.</td></tr>
+            <tr><th scope="row">수액 (영양공급수액)</th><td data-label="걸리는 시간"><span class="todo">[디렉터 확인]</span></td><td data-label="오시기 전에 알아 두실 것"><span class="todo">[디렉터 확인: 미리 오실 시간]</span></td></tr>
+            <tr><th scope="row">고주파온열암치료</th><td data-label="걸리는 시간"><span class="todo">[디렉터 확인]</span></td><td data-label="오시기 전에 알아 두실 것"><span class="todo">[디렉터 확인: 갈아입는 옷, 미리 오실 시간]</span></td></tr>
+            <tr><th scope="row">고압산소치료</th><td data-label="걸리는 시간"><span class="todo">[디렉터 확인]</span></td><td data-label="오시기 전에 알아 두실 것"><span class="todo">[디렉터 확인: 갈아입는 옷, 들고 들어가지 않는 물건]</span></td></tr>
+            <tr><th scope="row">림프 관리</th><td data-label="걸리는 시간"><span class="todo">[디렉터 확인]</span></td><td data-label="오시기 전에 알아 두실 것"><span class="todo">[디렉터 확인: 처음 받으시는 날 하는 일]</span></td></tr>
+            <tr><th scope="row">도수치료</th><td data-label="걸리는 시간"><span class="todo">[디렉터 확인]</span></td><td data-label="오시기 전에 알아 두실 것"><span class="todo">[디렉터 확인]</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>같은 날 여러 치료를 받으실 때의 순서와 기다리는 시간은 <span class="todo">[디렉터 확인]</span>입니다.</p>
+    </div>
+  </section>
+
+  <section class="q" id="q-junbi" aria-labelledby="h-junbi">
+    <div class="wrap">
+      <span class="qno">질문 4</span>
+      <h2 id="h-junbi">어떤 옷을 입고 무엇을 챙겨 오나요?</h2>
+      <h3>옷차림</h3>
+      <p>권하는 옷차림과 치료복은 <span class="todo">[디렉터 확인]</span>입니다.</p>
+      <p>고주파온열암치료 전에 갈아입는 옷과 미리 빼 두실 물건은 <span class="todo">[디렉터 확인]</span>입니다.</p>
+      <p>고압산소치료 전에 갈아입는 옷과 치료실에 들고 들어가지 않는 물건은 <span class="todo">[디렉터 확인]</span>입니다.</p>
+      <h3>챙겨 오실 것</h3>
+      <ul class="check">
+        <li>신분증 <span class="todo">[디렉터 확인]</span></li>
+        <li>첫 진료 서류 <span class="todo">[디렉터 확인: 서류 이름]</span></li>
+        <li>최근 검사 결과지 <span class="todo">[디렉터 확인]</span></li>
+        <li>드시는 약이나 약 봉투 <span class="todo">[디렉터 확인]</span></li>
+      </ul>
+      <div class="note">
+        <p><strong>케모포트가 있으신 분</strong></p>
+        <p>예약하실 때 케모포트가 있다고 알려 주세요. 대학병원·암병원에서 항암 주사를 맞으시고 바늘을 꽂은 채 오시는 경우, 바늘 제거와 헤파린 관리 안내는 <span class="todo">[디렉터 확인: 외래 진료에서 받으실 수 있는지, 미리 예약해야 하는지, 맡는 곳]</span>입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="q" id="q-siksa" aria-labelledby="h-siksa">
+    <div class="wrap">
+      <span class="qno">질문 5</span>
+      <h2 id="h-siksa">식사는 어떻게 신청하나요?</h2>
+      <p>외래 진료로 오시는 날 병원 식사를 원하시면 미리 신청해 주세요. <span class="todo">[디렉터 확인: 외래 진료 환자분 식사 여부와 비용]</span></p>
+      <dl class="facts">
+        <div><dt>신청 방법</dt><dd><span class="todo">[디렉터 확인: 안내 문자의 신청 링크로 하는지, 다른 방법이 있는지]</span></dd></div>
+        <div><dt>신청 마감</dt><dd><span class="todo">[디렉터 확인: 끼니별 마감 시각]</span></dd></div>
+        <div><dt>신청 안내를 받지 못하셨을 때</dt><dd><span class="todo">[디렉터 확인: 연락하실 곳]</span></dd></div>
+        <div><dt>취소</dt><dd><span class="todo">[디렉터 확인: 취소 방법과 마감]</span></dd></div>
+        <div><dt>가려 드셔야 할 음식</dt><dd>치료 때문에 가려 드셔야 할 음식이 있으면 신청하실 때 알려 주세요. <span class="todo">[디렉터 확인]</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="q" id="q-byeongyeong" aria-labelledby="h-byeongyeong">
+    <div class="wrap">
+      <span class="qno">질문 6</span>
+      <h2 id="h-byeongyeong">일정을 바꾸거나 취소하려면 어떻게 하나요?</h2>
+      <p class="lead"><strong>원내 상담실에 카카오톡 채널이나 전화로 알려 주세요.</strong> <span class="todo">[디렉터 확인: 일정 변경을 받는 창구]</span></p>
+      <p>말씀해 주실 것은 세 가지입니다. 성함, 예약하신 날짜와 치료, 옮기고 싶으신 날짜와 시간 두 가지입니다.</p>
+      <p>옮기신 일정은 확정 연락을 받으셔야 정해집니다. 확정 연락은 <span class="todo">[디렉터 확인: 누가, 언제까지, 어떤 방법으로]</span> 드립니다.</p>
+      <p>새 치료 일정이 나오면 하일렌 의료진에게도 알려 주세요. 다니시는 대학병원·암병원의 항암·검사 일정이 바뀐 경우가 여기에 들어갑니다.</p>
+      <div class="note limit">
+        <p><strong>몸이 좋지 않아 오시기 어려우면</strong> 오시기 전에 알려 주세요. 증상을 말씀해 주시면 의료진이 확인한 후 내원 여부를 안내합니다. <span class="todo">[디렉터 확인]</span> 숨이 차거나 증상이 심하면 가까운 응급실이나 119를 먼저 이용해 주십시오.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="q" id="q-jeonyeok" aria-labelledby="h-jeonyeok">
+    <div class="wrap">
+      <span class="qno">질문 7</span>
+      <h2 id="h-jeonyeok">늦게 도착하거나 저녁에 오시면 어떻게 되나요?</h2>
+      <p>예약 시간에 늦으실 것 같으면 출발 전이나 오시는 길에 원내 상담실로 전화해 주세요. 늦게 도착하셨을 때 예약하신 치료를 받으실 수 있는지와 순서는 <span class="todo">[디렉터 확인]</span>입니다.</p>
+      <div class="note wait">
+        <span class="tag">결론을 기다리는 칸</span>
+        <p>평일 접수 시간 <span class="val">17:30</span> 이후에 오시는 경우의 접수 장소와 치료 방법, 토요일·일요일·공휴일 안내가 들어갈 자리입니다.</p>
+        <p><span class="todo">[디렉터 확인: 저녁 내원 안내는 따로 검토 중이며, 결론이 나오면 채웁니다]</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="q" id="q-biyong" aria-labelledby="h-biyong">
+    <div class="wrap">
+      <span class="qno">질문 8</span>
+      <h2 id="h-biyong">비용과 서류는 어디에 묻나요?</h2>
+      <p class="lead"><strong>비용과 서류는 원무과에서 안내합니다.</strong> <span class="todo">[디렉터 확인: 2층 원무과, 전화로 묻는 방법]</span></p>
+      <p>치료 비용은 처방받으신 치료에 따라 달라, 진료 후에 안내합니다. <span class="todo">[디렉터 확인]</span> 비급여 항목과 금액은 비급여·비용 안내 쪽에서 보실 수 있습니다.</p>
+      <p>보험 청구에 필요한 서류는 보험사마다 다릅니다. 가입하신 보험사에 필요한 서류를 먼저 확인하신 후 원무과에 말씀해 주세요. 발급하는 서류와 발급 방법, 비용은 원무과가 안내합니다. <span class="todo">[디렉터 확인: 서류 종류·발급 조건·비용]</span></p>
+      <p>보험 적용 여부와 범위는 가입하신 보험사의 기준에 따라 다릅니다.</p>
+
+      <div class="contact">
+        <h2>오시기 전에 궁금하신 점은 원내 상담실에 물어보세요</h2>
+        <div class="row">
+          <span><small>카카오톡</small>하일렌요양병원 채널</span>
+          <span><small>전화</small><span class="val">062-439-1000</span></span>
+        </div>
+        <p style="margin:0">주소 <span class="val">61928 전남광주통합특별시 서구 상무대로 1176</span> <span class="todo">[디렉터 확인]</span></p>
+      </div>
+
+      <h3 style="margin-top:26px">함께 보기</h3>
+      <ul class="links">
+        <li><a href="https://1show-design.github.io/heilen-2026/oerae.html" target="_blank" rel="noopener">단기입원·외래 안내</a></li>
+        <li><a href="https://1show-design.github.io/heilen-2026/osineungil.html" target="_blank" rel="noopener">오시는 길·면회</a></li>
+        <li><a href="https://1show-design.github.io/heilen-2026/biyong.html" target="_blank" rel="noopener">비급여·비용 안내</a></li>
+        <li><a href="https://1show-design.github.io/heilen-2026/faq.html" target="_blank" rel="noopener">자주 묻는 질문</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>모든 치료 결정은 반드시 주치의 또는 지금 다니시는 대학병원·암병원 담당 의료진과 상담한 후 진행하시기 바랍니다. 치료 효과와 부작용은 환자분의 병기·체질·치료 이력에 따라 다를 수 있습니다.</p>
+    <p>하일렌요양병원 · 초안 2026-11-14</p>
+  </div>
+</footer>
+
+<aside class="appendix" id="checklist" aria-labelledby="h-checklist">
+  <div class="wrap">
+    <span class="eyebrow">검토용 부록 · 게시할 때 뺍니다</span>
+    <h2 id="h-checklist">확인 목록</h2>
+    <p>위 쪽의 <span class="todo">[디렉터 확인]</span>을 모두 모았습니다. 「초안 값」은 새 홈페이지 검토본에 적힌 표기이고, 그대로 써도 되는지 확인이 필요합니다.</p>
+
+    <h3>운영 시간과 장소</h3>
+    <ol class="cl">
+      <li><div><span class="ask">외래 진료 접수 시간이 맞습니까?</span><span class="ref"><b>초안 값</b> 월~금 09:00~17:30(점심 12:30~13:30), 토 09:00~12:00, 일·공휴일 쉼 · 출처 단기입원·외래, 오시는 길 쪽</span></div></li>
+      <li><div><span class="ask">일요일·공휴일에 외래 진료로 치료받으러 오시는 분은 어디에서 접수합니까?</span><span class="ref">초안은 접수를 「일·공휴일 쉼」으로 적고, 「원내 치료는 주말과 공휴일에도 이어집니다」도 함께 적었습니다.</span></div></li>
+      <li><div><span class="ask">접수하는 곳이 2층 원무과 한 곳입니까? 요일·시간·담당자 근무에 따라 바뀝니까?</span><span class="ref"><b>초안 값</b> 2층 원무과, 1층 중앙 엘리베이터 · 출처 오시는 길 쪽</span></div></li>
+      <li><div><span class="ask">1층에서 하실 일이 있습니까? (신발, 안내 데스크 등)</span></div></li>
+      <li><div><span class="ask">주차장 위치, 주차 요금, 발렛파킹을 이 쪽에 어떻게 씁니까?</span><span class="ref">오시는 길 쪽에 주차 안내 문장이 있습니다. 이 쪽에 같은 내용을 쓸지 정해 주십시오.</span></div></li>
+      <li><div><span class="ask">처음 한 번은 2층 상담실에서 치료 일정 담당자를 만납니까? 그 후 일정은 카카오톡 채널로 주고받습니까?</span><span class="ref"><b>초안 값</b> 그대로 · 출처 단기입원·외래, 입원 안내 쪽</span></div></li>
+      <li><div><span class="ask">혈압은 어디에서 재고, 주치의 진료실은 몇 층입니까?</span></div></li>
+      <li><div><span class="ask">치료실은 치료별로 몇 층입니까? (주사·수액, 고주파온열암치료, 고압산소치료, 림프 관리, 도수치료)</span><span class="ref"><b>초안 값</b> 외래센터 블룸 9층 · 출처 단기입원·외래 쪽</span></div></li>
+      <li><div><span class="ask">첫 방문 순서가 「접수 → 상담실 → 혈압·진료 → 치료 → 다음 일정」이 맞습니까?</span></div></li>
+      <li><div><span class="ask">다음 일정은 그 자리에서 정합니까, 카카오톡 채널로 받습니까?</span></div></li>
+    </ol>
+
+    <h3>예약과 안내 문자</h3>
+    <ol class="cl" style="counter-reset: c 10">
+      <li><div><span class="ask">첫 외래 진료 예약 창구가 원내 상담실 · 카카오톡 채널 · 062-439-1000이 맞습니까?</span><span class="ref"><b>초안 값</b> 그대로 · 출처 단기입원·외래 쪽</span></div></li>
+      <li><div><span class="ask">예약 안내 문자는 언제 보냅니까? (예약이 정해진 직후, 전날 등)</span></div></li>
+      <li><div><span class="ask">안내 문자에 무엇이 들어갑니까? (날짜·시간·치료 이름·도착할 곳·식사 신청 안내)</span></div></li>
+      <li><div><span class="ask">첫 방문은 예약 시간보다 몇 분 일찍 오면 됩니까?</span></div></li>
+      <li><div><span class="ask">예약할 때 받는 내용(암 종류·수술 이름·치료 일정·케모포트·원하는 회복치료)이 맞습니까?</span><span class="ref">입원 안내 쪽 「받으신 수술 명칭, 관 삽입 여부, 앞으로의 치료 일정」을 외래 진료에 맞춰 옮겼습니다.</span></div></li>
+    </ol>
+
+    <h3>걸리는 시간</h3>
+    <ol class="cl" style="counter-reset: c 15">
+      <li><div><span class="ask">첫 방문의 접수·상담·진료는 얼마나 걸립니까?</span></div></li>
+      <li><div><span class="ask">주사(면역 주사제·고용량 비타민C)는 얼마나 걸립니까?</span></div></li>
+      <li><div><span class="ask">수액(영양공급수액)은 얼마나 걸리고, 미리 와야 합니까?</span></div></li>
+      <li><div><span class="ask">고주파온열암치료는 얼마나 걸리고, 몇 분 미리 와야 합니까?</span></div></li>
+      <li><div><span class="ask">고압산소치료는 얼마나 걸립니까?</span></div></li>
+      <li><div><span class="ask">림프 관리는 얼마나 걸리고, 처음 받는 날 따로 하는 일이 있습니까?</span></div></li>
+      <li><div><span class="ask">도수치료는 얼마나 걸립니까?</span></div></li>
+      <li><div><span class="ask">같은 날 여러 치료를 받으면 순서와 기다리는 시간은 어떻게 됩니까?</span></div></li>
+      <li><div><span class="ask">외래 회복치료 이름 7종이 지금도 맞습니까?</span><span class="ref"><b>초안 값</b> 고주파온열암치료 · 고압산소치료 · 도수치료 · 림프 관리 · 고용량 비타민C · 면역 주사제 · 영양공급수액 · 출처 단기입원·외래 쪽</span></div></li>
+    </ol>
+
+    <h3>옷차림과 준비물</h3>
+    <ol class="cl" style="counter-reset: c 24">
+      <li><div><span class="ask">권하는 옷차림이 있습니까? 치료복을 줍니까?</span></div></li>
+      <li><div><span class="ask">고주파온열암치료 전에 갈아입는 옷과 미리 빼 둘 물건이 있습니까?</span></div></li>
+      <li><div><span class="ask">고압산소치료 전에 갈아입는 옷과 치료실에 들고 들어가지 않는 물건이 있습니까?</span></div></li>
+      <li><div><span class="ask">첫 외래 진료 때 내는 서류는 무엇입니까?</span><span class="ref">입원 서류는 초안에 「소견서 또는 진료기록지 중 하나 · 신분증 · 피검사 결과지」로 적혀 있습니다(입원 안내 쪽). 외래 진료도 같은지 확인이 필요합니다.</span></div></li>
+      <li><div><span class="ask">신분증은 어떤 것이 됩니까? (모바일 신분증, 모바일 건강보험증 등)</span></div></li>
+      <li><div><span class="ask">드시는 약이나 약 봉투를 가져와야 합니까?</span><span class="ref">입원 안내 쪽에는 「봉투째 그대로 가져와 주세요」가 있습니다.</span></div></li>
+      <li><div><span class="ask">케모포트 바늘 제거와 헤파린 관리를 외래 진료에서 합니까? 미리 예약해야 합니까? 어디가 맡습니까?</span><span class="ref">의료 사실이라 원장님 확인이 필요합니다.</span></div></li>
+    </ol>
+
+    <h3>식사</h3>
+    <ol class="cl" style="counter-reset: c 31">
+      <li><div><span class="ask">외래 진료 환자분도 식사를 신청할 수 있습니까? 비용은 어떻게 됩니까?</span></div></li>
+      <li><div><span class="ask">신청 방법은 무엇입니까? 예약 안내 문자에 신청 링크가 함께 갑니까?</span></div></li>
+      <li><div><span class="ask">끼니별 신청 마감 시각은 언제입니까?</span></div></li>
+      <li><div><span class="ask">신청 안내를 받지 못했을 때 어디로 연락합니까? 취소는 어떻게 합니까?</span></div></li>
+      <li><div><span class="ask">가려 먹어야 할 음식이 있는 분은 어떻게 알립니까?</span></div></li>
+    </ol>
+
+    <h3>변경·취소와 늦은 도착</h3>
+    <ol class="cl" style="counter-reset: c 36">
+      <li><div><span class="ask">일정 변경과 취소를 받는 창구를 하나로 쓸 수 있습니까? 원내 상담실이 맞습니까?</span></div></li>
+      <li><div><span class="ask">변경 요청의 확정 연락은 누가, 언제까지, 어떤 방법으로 합니까?</span></div></li>
+      <li><div><span class="ask">예약 시간에 늦게 도착하면 예약한 치료를 받을 수 있습니까?</span></div></li>
+      <li><div><span class="ask">몸이 좋지 않아 연락한 분은 의료진이 확인한 후 내원 여부를 안내합니까?</span></div></li>
+    </ol>
+
+    <h3>저녁·주말 (따로 검토 중)</h3>
+    <ol class="cl" style="counter-reset: c 40">
+      <li><div><span class="ask">평일 접수 시간 이후에 오시는 분의 접수 장소와 치료 방법은 무엇입니까?</span><span class="ref">저녁 내원 안내는 따로 검토하고 있어, 결론이 나오면 이 칸을 채웁니다. 리플렛 확정 표기에 「퇴근 후 저녁 시간도 됩니다」가 있어 함께 맞춥니다.</span></div></li>
+      <li><div><span class="ask">토요일·일요일·공휴일에는 어디에서 접수하고 치료받습니까?</span></div></li>
+    </ol>
+
+    <h3>비용과 서류</h3>
+    <ol class="cl" style="counter-reset: c 42">
+      <li><div><span class="ask">비용 문의처가 2층 원무과입니까? 전화로 물을 때는 어떻게 연결됩니까?</span></div></li>
+      <li><div><span class="ask">치료 비용을 진료 후에 안내하는 것이 맞습니까?</span></div></li>
+      <li><div><span class="ask">발급하는 서류의 종류, 발급 조건, 원장님 진료가 필요한지, 발급 비용은 무엇입니까?</span></div></li>
+    </ol>
+
+    <h3>연락처와 이 쪽</h3>
+    <ol class="cl" style="counter-reset: c 45">
+      <li><div><span class="ask">전화·주소·대중교통 거리가 맞습니까?</span><span class="ref"><b>초안 값</b> 062-439-1000 · 61928 전남광주통합특별시 서구 상무대로 1176 · 농성역 1번 출구 약 8분, 돌고개역 3번 출구 약 10분, 서구청 정류장 약 8분 · 출처 오시는 길 쪽</span></div></li>
+      <li><div><span class="ask">이 쪽을 새로 만들어도 됩니까?</span><span class="ref">2025 홈페이지에 없는 새 쪽이라 병원장님 승인 요청에 올려야 합니다.</span></div></li>
+      <li><div><span class="ask">이 쪽을 어디에 둡니까? (이용 안내 메뉴 아래, 예약 안내 문자 링크)</span></div></li>
+    </ol>
+  </div>
+</aside>
+</body>
+</html>
