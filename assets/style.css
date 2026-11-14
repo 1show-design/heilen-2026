@@ -738,3 +738,55 @@ main > section > .slot[data-slot="ipwon-teuksil"] { grid-column: wide; aspect-ra
 .hero-frame.ph-todo::before { top: 52px; }   /* 11/1: 오른쪽 위 영상 자리 표식과 겹치지 않게 한 줄 아래 */
 .cta-top .btn, .quick .btn { white-space: nowrap; letter-spacing: .01em; }
 @media (max-width: 399px) { .cta-top .btn, .quick .btn { font-size: .84rem; } }
+
+/* ── 11/14 디렉터 지시: 층별 안내를 건물 안내판처럼(위층부터 한 줄씩), 치료실 바로가기 카드 ── */
+.floors { list-style: none; margin: 20px 0 8px; padding: 0; border-top: 1px solid var(--ink); }
+.floors > li { display: grid; grid-template-columns: 3.6em 1fr; gap: 0 14px; margin: 0; padding: 16px 0 18px; border-bottom: 1px solid var(--line); }
+.floors .fl { font-size: 1.7rem; font-weight: 300; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.floors .fl small { font-size: .78rem; font-weight: 500; letter-spacing: 0; margin-left: 2px; color: var(--ink-soft); }
+.floors strong { display: block; font-size: 1.08rem; font-weight: 600; line-height: 1.5; }
+.floors strong a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+.floors .sub { display: block; margin-top: 3px; font-size: .96rem; line-height: 1.6; }
+.floors .sub.etc { color: var(--ink-soft); font-size: .9rem; }
+.floors p { margin: 8px 0 0; font-size: .9rem; line-height: 1.7; color: var(--ink-soft); }
+.floors li.care .fl, .floors li.care strong { color: var(--accent); }
+@media (min-width: 720px) { .floors > li { grid-template-columns: 5em 1fr; gap: 0 24px; } .floors .fl { font-size: 2.1rem; } }
+.cards.centers { margin-top: 28px; }
+
+/* ── 11/14 디렉터 지시: 암정보 도서관을 서가처럼 ── */
+/* ───────── 11/14 암정보 도서관(doseogwan.html) 다시 짜기 — style.css 끝에 붙인다 ─────────
+   디렉터 지시 「암정보 도서관은 도서관처럼 다시 편집을 해주세요」. JS 없음. 기존 변수·.toc·ul.links·.related·details 규칙을 그대로 쓰고 모자란 것만 더한다.
+   lib-index        쪽 맨 위 「자료 찾기」(.toc 와 함께 씀). 넓은 화면에서도 한 줄씩
+   lib-index-shelf  색인에서 「암종별 서가」 줄(아래 암종 색인을 품음)
+   lib-shelf-index  암종 이름 색인. 휴대폰에서 줄바꿈으로 흐르는 낱말 단추(누르는 높이 44px)
+   lib-shelves      암종별 서가 칸 묶음(.faq 와 함께 씀)
+   lib-shelf        암종 한 칸(details, 기본 펼침). 칸 머리 = 암종 이름 + 글 수
+   lib-count        칸 머리의 「글 N편」
+   lib-geul         글 목록(ul.links 와 함께 씀). 제목 앞에 「글」 표시
+   lib-kaellum      자문의 칼럼 목록(.related 와 함께 씀). 제목 앞에 「칼럼」 표시 */
+
+.lib-index ol { grid-template-columns: 1fr; }
+@media (min-width: 720px) { .lib-index ol { grid-template-columns: 1fr 1fr; } .lib-index ol > li.lib-index-shelf { grid-column: 1 / -1; } }
+.lib-index li a { font-weight: 500; }
+ul.lib-shelf-index { list-style: none; padding: 0; margin: 4px 0 10px; display: flex; flex-wrap: wrap; gap: 6px 6px; }
+ul.lib-shelf-index li { margin: 0; }
+ul.lib-shelf-index li a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px;
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink);
+  font-size: .88rem; font-weight: 400; text-decoration: none; white-space: nowrap;
+}
+ul.lib-shelf-index li a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* 암종 칸: 칸 머리를 서가 이름표처럼 굵게, 글 수는 작은 보조 글자 */
+.lib-shelves details.lib-shelf > summary { font-size: 1.08rem; }
+.lib-count { margin-left: .5em; font-size: .8rem; font-weight: 400; letter-spacing: .04em; color: var(--ink-soft); }
+
+/* 자료 종류 표시: 제목 앞 작은 꼬리표(글자는 CSS에만 있고 HTML 제목은 그대로) */
+ul.lib-geul > li > a::before,
+.related.lib-kaellum li > a::before {
+  display: inline-block; margin-right: .55em; padding: 0 .45em;
+  border: 1px solid var(--line-strong); color: var(--ink-soft);
+  font-size: .7rem; line-height: 1.6; letter-spacing: .04em; vertical-align: .12em;
+}
+ul.lib-geul > li > a::before { content: "글"; }
+.related.lib-kaellum li > a::before { content: "칼럼"; color: var(--accent); border-color: var(--accent); }
