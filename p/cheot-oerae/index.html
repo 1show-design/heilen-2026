@@ -189,13 +189,17 @@ ol.cl .ref { color: var(--ink-soft); font-size: .85rem; display: block; margin-t
 ol.cl .ref b { color: var(--ink); font-weight: 500; }
 .sub { font-size: clamp(1.05rem, 4vw, 1.25rem); font-weight: 400; color: var(--ink); line-height: 1.55; margin: -8px 0 10px; text-wrap: balance; }
 .qline { font-size: .86rem; color: var(--ink-soft); margin: 0 0 22px; }
+.contact .cta { gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 18px; background: var(--accent); color: var(--paper); text-decoration: none; font-weight: 600; flex: 1 1 200px; }
+.btn.line { background: var(--paper); color: var(--accent); border: 1px solid var(--accent); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 </style>
 </head>
 <body>
 <div class="draft" role="note">
   <div class="wrap">
     <p style="margin:0"><strong>검토용 초안 · 홈페이지 게시 전 · 2026-11-15 디렉터 원고 반영</strong></p>
-    <p style="margin:0"><span class="todo">[디렉터 확인]</span> 표시는 아직 확인하지 않은 값입니다. 남은 확인 항목은 <a href="#checklist">맨 아래</a>에 있습니다.</p>
+    <p style="margin:0"><span class="todo">[디렉터 확인]</span> 표시는 아직 확인하지 않은 값입니다.</p>
   </div>
 </div>
 
@@ -227,10 +231,10 @@ ol.cl .ref b { color: var(--ink); font-weight: 500; }
       <li><h3>다음 일정 정하기</h3></li>
     </ol>
 
-    <nav class="toc" aria-label="이 쪽 차례">
-      <p>이 쪽 차례</p>
+    <nav class="toc" aria-label="자주 하는 질문">
+      <p>자주 하는 질문</p>
       <ol>
-        <li><a href="#q-dongseon">도착 후 가시는 곳</a></li>
+        <li><a href="#q-dongseon">처음 도착 후 어디로 가나요?</a></li>
         <li><a href="#q-sigan">치료별 걸리는 시간</a></li>
         <li><a href="#q-junbi">챙겨 오실 것</a></li>
         <li><a href="#q-siksa">식사 신청</a></li>
@@ -305,9 +309,9 @@ ol.cl .ref b { color: var(--ink); font-weight: 500; }
       <span class="qno">질문 3</span>
       <h2 id="h-junbi">무엇을 챙겨 오나요?</h2>
       <h3>챙겨 오실 것</h3>
+      <p><strong>신분증은 꼭 챙겨 주세요.</strong> 모바일 신분증, 모바일 건강보험증도 됩니다.</p>
       <p>아래 준비물은 필요하신 경우에 챙겨 오시면 됩니다.</p>
       <ul class="check">
-        <li>신분증 (모바일 신분증, 모바일 건강보험증도 됩니다)</li>
         <li>소견서 또는 진료기록지 중 하나</li>
         <li>피검사 결과지</li>
         <li>드시는 약 봉투나 처방전</li>
@@ -364,9 +368,9 @@ ol.cl .ref b { color: var(--ink); font-weight: 500; }
 
       <div class="contact">
         <h2>오시기 전에 궁금하신 점은 원내 상담실에 물어보세요</h2>
-        <div class="row">
-          <span><small>카카오톡</small>하일렌요양병원 채널</span>
-          <span><small>전화</small>062-439-1000</span>
+        <div class="row cta">
+          <a class="btn" href="https://pf.kakao.com/_hrVAG" target="_blank" rel="noopener">카카오톡 채널로 문의</a>
+          <a class="btn line" href="tel:062-439-1000">전화 062-439-1000</a>
         </div>
       </div>
     </div>
@@ -379,26 +383,5 @@ ol.cl .ref b { color: var(--ink); font-weight: 500; }
     <p>하일렌요양병원 · 초안 2026-11-15 (디렉터 원고 반영)</p>
   </div>
 </footer>
-
-<aside class="appendix" id="checklist" aria-labelledby="h-checklist">
-  <div class="wrap">
-    <span class="eyebrow">검토용 부록 · 게시할 때 뺍니다</span>
-    <h2 id="h-checklist">남은 확인 항목</h2>
-    <p>디렉터 원고(11/15)를 반영하고 남은 항목입니다. 번호는 검수표 번호와 같습니다.</p>
-
-    <h3>값과 표기</h3>
-    <ol class="cl" style="counter-reset: c 0">
-      <li><div><span class="ask">1번 · 외래 진료 시간을 홈페이지 다른 쪽에도 같은 값으로 바꿉니까?</span><span class="ref">이 쪽은 월~토 08:00~21:00, 일 09:00~17:30이고, 단기입원·외래와 오시는 길 쪽은 월~금 09:00~17:30, 토 09:00~12:00입니다.</span></div></li>
-      <li><div><span class="ask">14번 · 첫 방문은 예약 시간 40분 전 도착이 맞습니까?</span><span class="ref">첫 방문 상담·접수·진료 시간은 약 10~40분으로 고쳐졌습니다. 예약 시간이 치료 시작 시간인지 확인이 필요합니다.</span></div></li>
-      <li><div><span class="ask">31번 · 케모포트 바늘 제거와 헤파린 관리 문장이 맞습니까?</span><span class="ref">의료 사실이라 원장님 확인이 필요합니다.</span></div></li>
-      <li><div><span class="ask">46번 · 버스 정류장 거리(서구청 정류장 걸어서 약 8분)가 맞습니까?</span><span class="ref">오시는 길 쪽 표기를 옮겼습니다.</span></div></li>
-    </ol>
-
-    <h3>이 쪽</h3>
-    <ol class="cl" style="counter-reset: c 4">
-      <li><div><span class="ask">47·48번 · 이 쪽을 새로 만들지, 어디에 둘지 정해 주십시오.</span><span class="ref">2025 홈페이지에 없는 새 쪽이라 병원장님 승인 요청에 올려야 합니다. 통증 주사·자율신경 주사·통증 치료를 단기입원·외래 쪽 치료 목록에도 더할지 함께 정합니다.</span></div></li>
-    </ol>
-  </div>
-</aside>
 </body>
 </html>
